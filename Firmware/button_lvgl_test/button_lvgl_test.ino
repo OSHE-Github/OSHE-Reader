@@ -49,6 +49,7 @@ void pin_setup(){
   pinMode(homeBtn, INPUT);
 }
 
+/* TODO */
 void keyboard_read(lv_indev_t *indev, lv_indev_data_t *data) {
   if(key_pressed()) {
     data->key = my_last_key();            /* Get the last pressed or released key */
@@ -58,6 +59,7 @@ void keyboard_read(lv_indev_t *indev, lv_indev_data_t *data) {
   }
 }
 
+/* TODO */
 void loop(){
   uint8_t my_last_key(void)
   {
@@ -74,14 +76,17 @@ void loop(){
   homeBtnState = digitalRead(homeBtn);
 }
 
+/* TODO */
 void button_event_cb(lv_event_t * e) {
   lv_event_code_t code = lv_event_get_code(e);
   lv_obj_t * obj = lv_event_get_target(e);
 
+  /* FOCUS ON CLICKING!!! */
   if(code == LV_EVENT_CLICKED) {  // Select button was pressed, change screen based on button selection
     
   }
 
+  /* LATER PROBLEMS */
   if(code == LV_EVENT_FOCUSED) {  // Scroll onto a button -> turn button dark
     
   }
