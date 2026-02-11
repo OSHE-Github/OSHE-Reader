@@ -13,34 +13,34 @@ int leftBtnState = 0;
 int homeBtnState = 0;
 
 void ui_setup(){
-   // Create a group and add widgets to it so they can be selected by the keypad
-    lv_group_t *g = lv_group_create();
-    lv_indev_t *indev = lv_indev_create();
-    lv_indev_set_type(indev, LV_INDEV_TYPE_KEYPAD);
-    lv_indev_set_read_cb(indev, keyboard_read);
-    lv_indev_set_group(indev, g);
-    
-   // Assign the keypad input device to the group
-    lv_indev_set_group(indev_keypad, g);
+  // Create a group and add widgets to it so they can be selected by the keypad
+  lv_group_t *g = lv_group_create();
+  lv_indev_t *indev = lv_indev_create();
+  lv_indev_set_type(indev, LV_INDEV_TYPE_KEYPAD);
+  lv_indev_set_read_cb(indev, keyboard_read);
+  lv_indev_set_group(indev, g);
+  
+  // Assign the keypad input device to the group
+  lv_indev_set_group(indev_keypad, g);
 
-    // Create a button
-    lv_obj_t *btn1 = lv_btn_create(lv_scr_act());
-    // ... add position, size, and event callback ...
-    lv_obj_add_event_cb(btn1, button_event_cb, LV_EVENT_CLICKED, NULL);
+  // Create a button
+  lv_obj_t *btn1 = lv_btn_create(lv_scr_act());
+  // ... add position, size, and event callback ...
+  lv_obj_add_event_cb(btn1, button_event_cb, LV_EVENT_CLICKED, NULL);
 
-    // Add the button to the group
-    lv_group_add_obj(g, btn1);
+  // Add the button to the group
+  lv_group_add_obj(g, btn1);
 
-    // Create another button
-    lv_obj_t *btn2 = lv_btn_create(lv_scr_act());
-    // ... add position, size, and event callback ...
-    lv_obj_add_event_cb(btn2, button_event_cb, LV_EVENT_CLICKED, NULL);
+  // Create another button
+  lv_obj_t *btn2 = lv_btn_create(lv_scr_act());
+  // ... add position, size, and event callback ...
+  lv_obj_add_event_cb(btn2, button_event_cb, LV_EVENT_CLICKED, NULL);
 
-    // Add the second button to the group
-    lv_group_add_obj(g, btn2);
+  // Add the second button to the group
+  lv_group_add_obj(g, btn2);
 }
 
-void setup(){
+void pin_setup(){
 // Initialize button pins as input
   pinMode(upBtn, INPUT);
   pinMode(downBtn, INPUT);
@@ -72,4 +72,21 @@ void loop(){
   rightBtnState = digitalRead(rightBtn);
   leftBtnState = digitalRead(leftBtn);
   homeBtnState = digitalRead(homeBtn);
+}
+
+void button_event_cb(lv_event_t * e) {
+  lv_event_code_t code = lv_event_get_code(e);
+  lv_obj_t * obj = lv_event_get_target(e);
+
+  if(code == LV_EVENT_CLICKED) {  // Select button was pressed, change screen based on button selection
+    
+  }
+
+  if(code == LV_EVENT_FOCUSED) {  // Scroll onto a button -> turn button dark
+    
+  }
+
+  if(code == LV_EVENT_DEFOCUSED) {  // Scroll off of a button -> turn button light
+    
+  }
 }
