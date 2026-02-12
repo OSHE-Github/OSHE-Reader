@@ -5,6 +5,113 @@
 	(uuid "45bff31a-189b-4ed1-b273-a8e68dfd337a")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:C_Small"
 			(pin_numbers
 				(hide yes)
@@ -996,6 +1103,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 74.93) (xy 148.59 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1cb5ee5f-df5d-4a27-a9a5-d31508807625")
+	)
+	(wire
+		(pts
 			(xy 34.29 50.8) (xy 34.29 49.53)
 		)
 		(stroke
@@ -1053,6 +1170,16 @@
 			(type default)
 		)
 		(uuid "51c8a663-1bb0-4002-9da5-f8c038649c3e")
+	)
+	(wire
+		(pts
+			(xy 146.05 87.63) (xy 148.59 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ba36ea1-cd65-40d5-a80d-1f122bdb630b")
 	)
 	(wire
 		(pts
@@ -1156,6 +1283,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 55.88) (xy 148.59 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9121c74c-7620-4924-9971-a9c8488220cc")
+	)
+	(wire
+		(pts
 			(xy 60.96 67.31) (xy 63.5 67.31)
 		)
 		(stroke
@@ -1163,6 +1300,26 @@
 			(type default)
 		)
 		(uuid "9cc7ca4e-8ea7-48ba-851c-267369ab02c2")
+	)
+	(wire
+		(pts
+			(xy 146.05 68.58) (xy 148.59 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a747b8dd-d1b7-429e-a6ee-dee86183a9ff")
+	)
+	(wire
+		(pts
+			(xy 146.05 62.23) (xy 148.59 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac873d03-3ee6-4ad3-be41-302720df5ae2")
 	)
 	(wire
 		(pts
@@ -1196,6 +1353,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 49.53) (xy 148.59 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c472b32f-0426-4b29-95c3-d1ecea9a5f57")
+	)
+	(wire
+		(pts
 			(xy 60.96 74.93) (xy 63.5 74.93)
 		)
 		(stroke
@@ -1223,6 +1390,16 @@
 			(type default)
 		)
 		(uuid "dbb18df0-136d-4069-998e-63833a0408ea")
+	)
+	(wire
+		(pts
+			(xy 146.05 81.28) (xy 148.59 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6fbb038-f4bb-48ea-bd8c-9d8bd762eb51")
 	)
 	(wire
 		(pts
@@ -1322,6 +1499,17 @@
 		)
 		(uuid "4ccdc5be-b4c4-41f8-9baf-3dd487e26401")
 	)
+	(hierarchical_label "EP_D{slash}C"
+		(shape output)
+		(at 146.05 81.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5c09ed4e-47cd-4f8b-a859-0792b1cf8c0a")
+	)
 	(hierarchical_label "SD_CS"
 		(shape output)
 		(at 106.68 72.39 0)
@@ -1377,6 +1565,28 @@
 		)
 		(uuid "7fbb1787-cd30-4835-a957-30ab62a363e5")
 	)
+	(hierarchical_label "CIPO"
+		(shape input)
+		(at 146.05 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "87541743-255c-4078-a517-0df4cca35122")
+	)
+	(hierarchical_label "SCK"
+		(shape output)
+		(at 146.05 62.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8972d3d7-b46d-495e-bd9e-64ff5ac904ed")
+	)
 	(hierarchical_label "EP_D{slash}C"
 		(shape output)
 		(at 106.68 67.31 0)
@@ -1420,6 +1630,17 @@
 			(justify left)
 		)
 		(uuid "b106ae15-6f60-4d04-a0c0-8bad414b9d41")
+	)
+	(hierarchical_label "COPI"
+		(shape output)
+		(at 146.05 49.53 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b17c23df-5a13-405f-9ccb-33ee4bde5f32")
 	)
 	(hierarchical_label "LeftButton"
 		(shape input)
@@ -1465,6 +1686,28 @@
 		)
 		(uuid "f0a172b5-d86d-4c85-accb-ac599fac9b8c")
 	)
+	(hierarchical_label "EP_CS"
+		(shape output)
+		(at 146.05 74.93 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f2c42542-0235-4257-b256-b55a52c2ca7c")
+	)
+	(hierarchical_label "EP_RESET"
+		(shape output)
+		(at 146.05 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f93e0add-f9ca-4f36-aaf2-e6559f6ae85f")
+	)
 	(hierarchical_label "GND"
 		(shape input)
 		(at 44.45 69.85 270)
@@ -1475,6 +1718,17 @@
 			(justify right)
 		)
 		(uuid "f9fd3e99-7a07-4682-a3c3-79c1f50a9440")
+	)
+	(hierarchical_label "SD_CS"
+		(shape output)
+		(at 146.05 68.58 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fb5b8e49-1549-478e-af3e-18dc2332bbe3")
 	)
 	(symbol
 		(lib_id "ESP32-C6-DEV-KIT-N8:ESP32-C6-DEV-KIT-N8")
@@ -1642,6 +1896,140 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 74.93 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "31e2de7d-b8ec-45e7-8614-f09ce37d9a6f")
+		(property "Reference" "TP_EP_CS1"
+			(at 153.67 73.6599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 76.1999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+			(at 148.59 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "258104bb-faa2-4241-b0ed-dac5603d9107")
+		)
+		(instances
+			(project "OSHE-Reader-PCB"
+				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
+					(reference "TP_EP_CS1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 55.88 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3598628d-394a-409d-a17f-99b269d6159e")
+		(property "Reference" "TP_CIPO1"
+			(at 153.67 54.6099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 57.1499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+			(at 148.59 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6eb28ded-4e0f-479c-8b22-855214c76c1d")
+		)
+		(instances
+			(project "OSHE-Reader-PCB"
+				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
+					(reference "TP_CIPO1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 30.48 53.34 0)
 		(mirror y)
@@ -1718,6 +2106,140 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 81.28 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "80d3e430-a6f9-4936-94ab-3b8748121e2d")
+		(property "Reference" "TP_EP_D/C1"
+			(at 153.67 80.0099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 82.5499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+			(at 148.59 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6857559c-ad94-4d90-bcc5-9cf6f3a42ec7")
+		)
+		(instances
+			(project "OSHE-Reader-PCB"
+				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
+					(reference "TP_EP_D/C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 49.53 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "901716f7-1075-4e0c-b5d8-8897b0e613a9")
+		(property "Reference" "TP_COPI1"
+			(at 153.67 48.2599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 50.7999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+			(at 148.59 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "97c2f31b-d5c6-4b0a-9a0a-b8facd2ed554")
+		)
+		(instances
+			(project ""
+				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
+					(reference "TP_COPI1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 44.45 67.31 0)
 		(mirror y)
@@ -1788,6 +2310,73 @@
 			(project "OSHE-Reader-Microcontroller"
 				(path "/45bff31a-189b-4ed1-b273-a8e68dfd337a"
 					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 62.23 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7673839-1391-4937-b19c-778638ede2e6")
+		(property "Reference" "TP_SCK1"
+			(at 153.67 60.9599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 63.4999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+			(at 148.59 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c234fa79-40ca-46cc-87d3-3739efee5d01")
+		)
+		(instances
+			(project "OSHE-Reader-PCB"
+				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
+					(reference "TP_SCK1")
 					(unit 1)
 				)
 			)
@@ -1939,6 +2528,140 @@
 			(project "OSHE-Reader-Microcontroller"
 				(path "/45bff31a-189b-4ed1-b273-a8e68dfd337a"
 					(reference "C24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 87.63 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "da1f9071-8b16-4f9a-b1f8-4b3a4452400c")
+		(property "Reference" "TP_EP_RESET1"
+			(at 153.67 86.3599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 88.8999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+			(at 148.59 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "07e2605f-5415-4508-9380-e8b8b593d2d5")
+		)
+		(instances
+			(project "OSHE-Reader-PCB"
+				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
+					(reference "TP_EP_RESET1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 68.58 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fc021fa6-6365-467a-9df3-ad49ed541d4a")
+		(property "Reference" "TP_SD_CS1"
+			(at 153.67 67.3099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 69.8499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+			(at 148.59 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cc00b931-d8ed-42d8-97c1-5012402fc21a")
+		)
+		(instances
+			(project "OSHE-Reader-PCB"
+				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
+					(reference "TP_SD_CS1")
 					(unit 1)
 				)
 			)
