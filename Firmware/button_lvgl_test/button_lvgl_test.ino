@@ -84,6 +84,26 @@ void loop(){
   leftBtnState = digitalRead(leftBtn);
   homeBtnState = digitalRead(homeBtn);
   
+  if (upBtnState = 1){
+    button_event_cb(*btn1);
+    upBtnState = 0;//reset interrupt flag
+  }
+  if (downBtnState = 1){
+    button_event_cb(*btn1);
+    upBtnState = 0;//reset interrupt flag
+  }
+  if (rightBtnState = 1){
+    button_event_cb(*btn1);
+    upBtnState = 0;//reset interrupt flag
+  }
+  if (leftBtnState = 1){
+    button_event_cb(*btn1);
+    upBtnState = 0;//reset interrupt flag
+  }
+  if (homeBtnState = 1){
+    button_event_cb(*btn1);
+    upBtnState = 0;//reset interrupt flag
+  }
 
 }
 
@@ -92,7 +112,6 @@ void button_pressed_up(void){
   {
     upBtnState = 1;//set flag
     lastISRmillis = millis();
-    button_event_cb(*btn1);
   }
 }
 void button_pressed_down(void){
@@ -100,7 +119,6 @@ void button_pressed_down(void){
   {
     downBtnState = 1;//set flag
     lastISRmillis = millis();
-    button_event_cb(*btn1);
   }
 }
 void button_pressed_right(void){
@@ -108,7 +126,6 @@ void button_pressed_right(void){
   {
     rightBtnState = 1;//set flag
     lastISRmillis = millis();
-    button_event_cb(*btn1);
   }
 }
 void button_pressed_left(void){
@@ -116,7 +133,6 @@ void button_pressed_left(void){
   {
     leftBtnState = 1;//set flag
     lastISRmillis = millis();
-    button_event_cb(*btn1);
   }
 }
 void button_pressed_home(void){
@@ -124,7 +140,6 @@ void button_pressed_home(void){
   {
     homeBtnState = 1;//set flag
     lastISRmillis = millis();
-    button_event_cb(*btn1);
   }
 }
 /* TODO */
