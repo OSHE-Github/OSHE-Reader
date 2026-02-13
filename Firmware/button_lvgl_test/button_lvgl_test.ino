@@ -85,24 +85,24 @@ void loop(){
   homeBtnState = digitalRead(homeBtn);
   
   if (upBtnState = 1){
-    button_event_cb(*btn1);
     upBtnState = 0;//reset interrupt flag
+    button_event_cb(*btn1);
   }
   if (downBtnState = 1){
-    button_event_cb(*btn1);
     upBtnState = 0;//reset interrupt flag
+    button_event_cb(*btn1);
   }
   if (rightBtnState = 1){
-    button_event_cb(*btn1);
     upBtnState = 0;//reset interrupt flag
+    button_event_cb(*btn1);
   }
   if (leftBtnState = 1){
-    button_event_cb(*btn1);
     upBtnState = 0;//reset interrupt flag
+    button_event_cb(*btn1);
   }
   if (homeBtnState = 1){
-    button_event_cb(*btn1);
     upBtnState = 0;//reset interrupt flag
+    button_event_cb(*btn1);
   }
 
 }
