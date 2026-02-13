@@ -12,6 +12,9 @@ int rightBtnState = 0;
 int leftBtnState = 0;
 int homeBtnState = 0;
 
+//Variable for debouncing 
+unsigned long lastISRmillis = 0L;
+
 void ui_setup(){
   // Create a group and add widgets to it so they can be selected by the keypad
   lv_group_t *g = lv_group_create();
@@ -47,6 +50,12 @@ void pin_setup(){
   pinMode(rightBtn, INPUT);
   pinMode(leftBtn, INPUT);
   pinMode(homeBtn, INPUT);
+
+  attachInterrupt(digitalPinToInterrupt(upBtn), button_pressed_up, FALLING);
+  attachInterrupt(digitalPinToInterrupt(downBtn), button_pressed_down, FALLING);
+  attachInterrupt(digitalPinToInterrupt(rightBtn), button_pressed_right, FALLING);
+  attachInterrupt(digitalPinToInterrupt(leftBtn), button_pressed_left, FALLING);
+  attachInterrupt(digitalPinToInterrupt(homeBtn), button_pressed_home, FALLING);
 }
 
 /* TODO */
@@ -74,8 +83,50 @@ void loop(){
   rightBtnState = digitalRead(rightBtn);
   leftBtnState = digitalRead(leftBtn);
   homeBtnState = digitalRead(homeBtn);
+  
+
 }
 
+void button_pressed_up(void){
+  if (millis() > lastISRmillis + 50)//50 mS debounce time
+  {
+    upBtnState = 1;//set flag
+    lastISRmillis = millis();
+    button_event_cb(*btn1);
+  }
+}
+void button_pressed_down(void){
+  if (millis() > lastISRmillis + 50)//50 mS debounce time
+  {
+    downBtnState = 1;//set flag
+    lastISRmillis = millis();
+    button_event_cb(*btn1);
+  }
+}
+void button_pressed_right(void){
+  if (millis() > lastISRmillis + 50)//50 mS debounce time
+  {
+    rightBtnState = 1;//set flag
+    lastISRmillis = millis();
+    button_event_cb(*btn1);
+  }
+}
+void button_pressed_left(void){
+  if (millis() > lastISRmillis + 50)//50 mS debounce time
+  {
+    leftBtnState = 1;//set flag
+    lastISRmillis = millis();
+    button_event_cb(*btn1);
+  }
+}
+void button_pressed_home(void){
+  if (millis() > lastISRmillis + 50)//50 mS debounce time
+  {
+    homeBtnState = 1;//set flag
+    lastISRmillis = millis();
+    button_event_cb(*btn1);
+  }
+}
 /* TODO */
 void button_event_cb(lv_event_t * e) {
   lv_event_code_t code = lv_event_get_code(e);
