@@ -1273,6 +1273,16 @@
 	)
 	(wire
 		(pts
+			(xy 146.05 93.98) (xy 148.59 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8badd474-eba3-49ea-9d0c-543bca8fcb2f")
+	)
+	(wire
+		(pts
 			(xy 60.96 85.09) (xy 63.5 85.09)
 		)
 		(stroke
@@ -1663,6 +1673,17 @@
 			(justify right)
 		)
 		(uuid "cf6259ff-6265-47c3-b5d0-279dcb6032fe")
+	)
+	(hierarchical_label "GND"
+		(shape input)
+		(at 146.05 93.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d0a7b8dd-7779-4cdf-81ea-6b0b50e0f13a")
 	)
 	(hierarchical_label "RightButton"
 		(shape input)
@@ -2595,6 +2616,73 @@
 			(project "OSHE-Reader-PCB"
 				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
 					(reference "TP_EP_RESET1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 148.59 93.98 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee3b8571-3f37-4cc0-9984-1f8aaba105a0")
+		(property "Reference" "TP_GND2"
+			(at 153.67 92.7099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 153.67 95.2499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
+			(at 148.59 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 148.59 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "30828012-f585-4df0-a8cf-d50953ca2ef7")
+		)
+		(instances
+			(project "OSHE-Reader-PCB"
+				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
+					(reference "TP_GND2")
 					(unit 1)
 				)
 			)
