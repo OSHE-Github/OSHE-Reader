@@ -2631,7 +2631,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ee3b8571-3f37-4cc0-9984-1f8aaba105a0")
-		(property "Reference" "TP_GND2"
+		(property "Reference" "TP_GND3"
 			(at 153.67 92.7099 90)
 			(effects
 				(font
@@ -2682,7 +2682,7 @@
 		(instances
 			(project "OSHE-Reader-PCB"
 				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46/03424bf7-051b-4358-a08a-8020da2e6def"
-					(reference "TP_GND2")
+					(reference "TP_GND3")
 					(unit 1)
 				)
 			)
