@@ -84,23 +84,23 @@ void loop(){
   leftBtnState = digitalRead(leftBtn);
   homeBtnState = digitalRead(homeBtn);
   
-  if (upBtnState = 1){
+  if (upBtnState == 1){
     upBtnState = 0;//reset interrupt flag
     button_event_cb(*btn1);
   }
-  if (downBtnState = 1){
+  if (downBtnState == 1){
     upBtnState = 0;//reset interrupt flag
     button_event_cb(*btn1);
   }
-  if (rightBtnState = 1){
+  if (rightBtnState == 1){
     upBtnState = 0;//reset interrupt flag
     button_event_cb(*btn1);
   }
-  if (leftBtnState = 1){
+  if (leftBtnState == 1){
     upBtnState = 0;//reset interrupt flag
     button_event_cb(*btn1);
   }
-  if (homeBtnState = 1){
+  if (homeBtnState == 1){
     upBtnState = 0;//reset interrupt flag
     button_event_cb(*btn1);
   }
@@ -149,7 +149,12 @@ void button_event_cb(lv_event_t * e) {
 
   /* FOCUS ON CLICKING!!! */
   if(code == LV_EVENT_CLICKED) {  // Select button was pressed, change screen based on button selection
-    
+    if (obj == btn1) {
+      Serial.println("Button 1 pressed");
+    }
+    else if (obj == btn2) {
+      Serial.println("Button 2 pressed");
+    }
   }
 
   /* LATER PROBLEMS */
