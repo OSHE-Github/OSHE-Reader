@@ -1652,7 +1652,7 @@
 		)
 		(uuid "b17c23df-5a13-405f-9ccb-33ee4bde5f32")
 	)
-	(hierarchical_label "LeftButton"
+	(hierarchical_label "HomeButton"
 		(shape input)
 		(at 106.68 59.69 0)
 		(effects
@@ -1663,7 +1663,7 @@
 		)
 		(uuid "be29cc9a-d73c-479c-a156-97a15cefbb64")
 	)
-	(hierarchical_label "HomeButton"
+	(hierarchical_label "LeftButton"
 		(shape input)
 		(at 60.96 74.93 180)
 		(effects

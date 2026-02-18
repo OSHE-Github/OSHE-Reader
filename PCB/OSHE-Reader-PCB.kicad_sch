@@ -3346,7 +3346,7 @@
 				(justify left)
 			)
 		)
-		(pin "HomeButton" input
+		(pin "RightButton" input
 			(at 97.79 76.2 180)
 			(uuid "8070c727-dfc9-43dd-860a-e1cb3084f5c6")
 			(effects
@@ -3376,7 +3376,7 @@
 				(justify left)
 			)
 		)
-		(pin "RightButton" input
+		(pin "HomeButton" input
 			(at 97.79 86.36 180)
 			(uuid "fe0db040-3294-40a2-9d6e-fdd4d1d0b708")
 			(effects
