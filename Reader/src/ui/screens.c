@@ -12,8 +12,8 @@
 
 objects_t objects;
 
-static const char *screen_names[] = { "Main", "Screen_2" };
-static const char *object_names[] = { "main", "screen_2", "screen2_button", "main_button" };
+static const char *screen_names[] = { "Main" };
+static const char *object_names[] = { "main" };
 
 //
 // Event handlers
@@ -29,41 +29,6 @@ static void event_handler_cb_main_main(lv_event_t *e) {
     if (event == LV_EVENT_SCREEN_LOAD_START) {
         // group: keypad
         lv_group_remove_all_objs(groups.keypad);
-        lv_group_add_obj(groups.keypad, objects.screen2_button);
-    }
-}
-
-static void event_handler_cb_main_screen2_button(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = lv_event_get_user_data(e);
-    (void)flowState;
-    
-    if (event == LV_EVENT_PRESSED) {
-        e->user_data = (void *)0;
-        flowPropagateValueLVGLEvent(flowState, 0, 0, e);
-    }
-}
-
-static void event_handler_cb_screen_2_screen_2(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = lv_event_get_user_data(e);
-    (void)flowState;
-    
-    if (event == LV_EVENT_SCREEN_LOAD_START) {
-        // group: keypad
-        lv_group_remove_all_objs(groups.keypad);
-        lv_group_add_obj(groups.keypad, objects.main_button);
-    }
-}
-
-static void event_handler_cb_screen_2_main_button(lv_event_t *e) {
-    lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = lv_event_get_user_data(e);
-    (void)flowState;
-    
-    if (event == LV_EVENT_PRESSED) {
-        e->user_data = (void *)0;
-        flowPropagateValueLVGLEvent(flowState, 0, 0, e);
     }
 }
 
@@ -77,19 +42,37 @@ void create_screen_main() {
     lv_obj_t *obj = lv_obj_create(0);
     objects.main = obj;
     lv_obj_set_pos(obj, 0, 0);
-    lv_obj_set_size(obj, 480, 648);
+    lv_obj_set_size(obj, 648, 480);
     lv_obj_add_event_cb(obj, event_handler_cb_main_main, LV_EVENT_ALL, flowState);
     add_style_screen_light(obj);
     {
         lv_obj_t *parent_obj = obj;
         {
-            // screen2_button
             lv_obj_t *obj = lv_button_create(parent_obj);
-            objects.screen2_button = obj;
-            lv_obj_set_pos(obj, 107, 241);
-            lv_obj_set_size(obj, 266, 83);
-            lv_obj_add_event_cb(obj, event_handler_cb_main_screen2_button, LV_EVENT_ALL, flowState);
-            lv_obj_remove_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE);
+            lv_obj_set_pos(obj, 274, 265);
+            lv_obj_set_size(obj, 100, 50);
+            add_style_button_light(obj);
+            lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_x(obj, 100, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_y(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_transform_rotation(obj, 900, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_transform_pivot_x(obj, 50, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_transform_pivot_y(obj, 25, LV_PART_MAIN | LV_STATE_DEFAULT);
+            {
+                lv_obj_t *parent_obj = obj;
+                {
+                    lv_obj_t *obj = lv_label_create(parent_obj);
+                    lv_obj_set_pos(obj, 0, 0);
+                    lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                    lv_label_set_text(obj, "Button");
+                }
+            }
+        }
+        {
+            lv_obj_t *obj = lv_button_create(parent_obj);
+            lv_obj_set_pos(obj, -68, 0);
+            lv_obj_set_size(obj, 100, 50);
             add_style_button_light(obj);
             {
                 lv_obj_t *parent_obj = obj;
@@ -98,7 +81,7 @@ void create_screen_main() {
                     lv_obj_set_pos(obj, 0, 0);
                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                     lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-                    lv_label_set_text(obj, "To Screen 2");
+                    lv_label_set_text(obj, "Button2");
                 }
             }
         }
@@ -110,7 +93,6 @@ void create_screen_main() {
 void delete_screen_main() {
     lv_obj_delete(objects.main);
     objects.main = 0;
-    objects.screen2_button = 0;
     deletePageFlowState(0);
 }
 
@@ -119,57 +101,9 @@ void tick_screen_main() {
     (void)flowState;
 }
 
-void create_screen_screen_2() {
-    void *flowState = getFlowState(0, 1);
-    (void)flowState;
-    lv_obj_t *obj = lv_obj_create(0);
-    objects.screen_2 = obj;
-    lv_obj_set_pos(obj, 0, 0);
-    lv_obj_set_size(obj, 480, 648);
-    lv_obj_add_event_cb(obj, event_handler_cb_screen_2_screen_2, LV_EVENT_ALL, flowState);
-    add_style_screen_light(obj);
-    {
-        lv_obj_t *parent_obj = obj;
-        {
-            // main_button
-            lv_obj_t *obj = lv_button_create(parent_obj);
-            objects.main_button = obj;
-            lv_obj_set_pos(obj, 190, 421);
-            lv_obj_set_size(obj, 100, 50);
-            lv_obj_add_event_cb(obj, event_handler_cb_screen_2_main_button, LV_EVENT_ALL, flowState);
-            add_style_button_light(obj);
-            {
-                lv_obj_t *parent_obj = obj;
-                {
-                    lv_obj_t *obj = lv_label_create(parent_obj);
-                    lv_obj_set_pos(obj, 0, 0);
-                    lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
-                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
-                    lv_label_set_text(obj, "To Main");
-                }
-            }
-        }
-    }
-    
-    tick_screen_screen_2();
-}
-
-void delete_screen_screen_2() {
-    lv_obj_delete(objects.screen_2);
-    objects.screen_2 = 0;
-    objects.main_button = 0;
-    deletePageFlowState(1);
-}
-
-void tick_screen_screen_2() {
-    void *flowState = getFlowState(0, 1);
-    (void)flowState;
-}
-
 typedef void (*create_screen_func_t)();
 create_screen_func_t create_screen_funcs[] = {
     create_screen_main,
-    create_screen_screen_2,
 };
 void create_screen(int screen_index) {
     create_screen_funcs[screen_index]();
@@ -181,7 +115,6 @@ void create_screen_by_id(enum ScreensEnum screenId) {
 typedef void (*delete_screen_func_t)();
 delete_screen_func_t delete_screen_funcs[] = {
     delete_screen_main,
-    delete_screen_screen_2,
 };
 void delete_screen(int screen_index) {
     delete_screen_funcs[screen_index]();
@@ -193,7 +126,6 @@ void delete_screen_by_id(enum ScreensEnum screenId) {
 typedef void (*tick_screen_func_t)();
 tick_screen_func_t tick_screen_funcs[] = {
     tick_screen_main,
-    tick_screen_screen_2,
 };
 void tick_screen(int screen_index) {
     tick_screen_funcs[screen_index]();
@@ -328,5 +260,4 @@ eez_flow_init_fonts(fonts, sizeof(fonts) / sizeof(ext_font_desc_t));
     
     // Create screens
     create_screen_main();
-    create_screen_screen_2();
 }

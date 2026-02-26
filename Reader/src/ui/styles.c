@@ -15,6 +15,13 @@ void init_style_button_light_MAIN_DEFAULT(lv_style_t *style) {
     lv_style_set_bg_color(style, lv_color_hex(0xffffffff));
     lv_style_set_border_color(style, lv_color_hex(0xff000000));
     lv_style_set_border_width(style, 2);
+    lv_style_set_align(style, LV_ALIGN_CENTER);
+    lv_style_set_x(style, 0);
+    lv_style_set_y(style, 0);
+    lv_style_set_transform_rotation(style, 900);
+    lv_style_set_transform_pivot_x(style, 50);
+    lv_style_set_transform_pivot_y(style, 25);
+    lv_style_set_translate_x(style, 0);
 };
 
 lv_style_t *get_style_button_light_MAIN_DEFAULT() {
