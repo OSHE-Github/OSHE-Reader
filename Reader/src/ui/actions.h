@@ -7,8 +7,6 @@
 extern "C" {
 #endif
 
-extern void action_focus(lv_event_t * e);
-
 #ifdef __cplusplus
 }
 #endif

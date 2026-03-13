@@ -46,7 +46,7 @@ native_var_t native_vars[] = {
 };
 
 ActionExecFunc actions[] = {
-    action_focus,
+    0
 };
 
 void ui_init() {
