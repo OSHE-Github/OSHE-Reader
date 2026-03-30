@@ -26,8 +26,7 @@ typedef struct {
     int manifest_count;
     char spine_ids[200][128];
     int spine_count;
-	char toc_id[128];
-    char toc_href[256];	// Path to toc
+	char toc_id[128];	// toc type
 } opf_data_t;
 
 // 
@@ -107,6 +106,18 @@ void start_opf(void *user_data, const char *name, const char **atts) {
     }
 }
 
+// Pulls title or author
+void char_data_opf(void *user_data, const char *s, int len) {
+	opf_data_t *opf = (opf_data_t *)user_data;
+    
+    if (opf->in_title) {
+        strncat(opf->title, s, len); 
+    } 
+    else if (opf->in_author) {
+        strncat(opf->author, s, len);
+    }
+}
+
 void end_opf(void *user_data, const char *name) {
     opf_data_t *opf = (opf_data_t *)user_data;
 	
@@ -134,22 +145,11 @@ void parse_opf(const char *xml, size_t len, opf_data_t *opf) {
     XML_ParserFree(parser);
 }
 
-// Pulls title or author
-void char_data_metadata(void *user_data, const char *s, int len) {
-	opf_data_t *opf = (opf_data_t *)user_data;
-    
-    if (data->in_title) {
-        strncat(data->title, s, len); 
-    } 
-    else if (data->in_author) {
-        strncat(data->author, s, len);
-    }
-}
-
 // TOC parser
 // Marks for chapter name, or gets the id
 void start_ncx(void *user_data, const char *name, const char **atts) {
     ncx_data_t *data = (ncx_data_t *)user_data;
+	
     if (strcmp(name, "text") == 0) {
         data->in_text = true;
     }
@@ -192,41 +192,41 @@ void end_ncx(void *user_data, const char *name) {
 
 // Unfinished, xhtml parser
 
-// XHTML Parser for tags 
-void start_xhtml(void *user_data, const char *name, const char **atts) {
-    strcpy(current_tag, name);
-    if (   )
-        
+void start_xhtml(void *user_data, const char *tag, const char **atts) {
+    xhtml_data_t *xhtml = (*container_data_t)user_data;
+	
+	if (strcmp(tag, "h1") == 0 || strcmp(tag, "h2") == 0) {
+        for (int i = 0; atts[i]; i += 2) {
+            if (strcmp(atts[i], "id") == 0) {
+				if(strcmp(atts[i + 1], chapters[6].href) {
+					        data->in_chapter = true;
+				}
+			}
+		}
+    }
+	
+	if (strcmp(tag, "p") == 0) {
+        data->in_paragraph = true;
+    }
 }
 
-void end_xhtml(void *user_data, const char *name) {
-    current_tag[0] = '\0';
-}
 
 void char_data_xhtml(void *user_data, const char *s, int len) {
-    if (stop_after_chapter) return;
-
-    char text[512];
-    snprintf(text, sizeof(text), "%.*s", len, s);
-
-    if (strcmp(current_tag, "h1") == 0 || strcmp(current_tag, "h2") == 0) {
-        // Look for chapter heading
-        if (!chapter_found && chapter_heading(text)) {
-            chapter_found = 1;
-            in_chapter = 1;
-            printf("=== %s ===\n", text);
-            return;
-        }
-        else if (chapter_found && chapter_heading(text)) {
-            // Next chapter reached
-            stop_after_chapter = 1;
-            return;
-        }
-    }
-
-    if (in_chapter)
-        printf("%.*s", len, s);
+    xhtml_data_t *xhtml = (*container_data_t)user_data;
+    
+    if (xhtml->in_chapter && xhtml->in_paragraph) {
+	
 }
+
+
+void end_xhtml(void *user_data, const char *name) {
+    xhtml_data_t *xhtml = (*container_data_t)user_data;
+	
+	if (strcmp(tag, "p") == 0) {
+        xhtml->in_paragraph = false;
+    }
+}
+
 
 void parse_xhtml(const char *xml, size_t len) {
     XML_Parser parser = XML_ParserCreate(NULL);
@@ -240,6 +240,7 @@ void parse_xhtml(const char *xml, size_t len) {
 // Main
 int main() {
     static const char *file_name = "MobyDick.epub";
+	static const char *toc_location = "toc.ncx";
 	
     char *opf_path = find_opf_path(container_xml, container_size);
 
