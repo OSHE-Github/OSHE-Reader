@@ -4,25 +4,33 @@
 #include <ctype.h>
 #include <expat.h>
 
-// Helper Structs
+// Path to content.opf
+typedef struct {
+    char opf_path[256];
+} container_data_t;
+
+// References to files in mantifest
 typedef struct {
     char id[128];
     char href[256];
 } manifest_item_t;
 
+// Opf contents (metadata, manifest, spine)
 typedef struct {
+	char author[256];
+	char title[256];
+	bool in_title;
+	bool in_author;
+	
     manifest_item_t manifest[200];
     int manifest_count;
     char spine_ids[200][128];
     int spine_count;
-	char toc_id[128];	// toc id
+	char toc_id[128];
     char toc_href[256];	// Path to toc
 } opf_data_t;
 
-typedef struct {
-    char opf_path[256];
-} container_data_t;
-
+// 
 typedef struct {
     toc_entry_t chapters[100];
     int count;
@@ -60,11 +68,19 @@ char *find_opf_path(const char *xml, size_t len) {
 }
 
 // content.opf Parser
-// Scans manifest and spine
+// Scans for metadata, manifest, and spine
 void start_opf(void *user_data, const char *name, const char **atts) {
     opf_data_t *opf = (*opf_data_t)user_data;
 
-    if (strcmp(name, "item") == 0) {
+    if (strcmp(name, "dc:title") == 0) {
+        opf->in_title = true;
+        opf->title[0] = '\0';
+    } 
+    else if (strcmp(name, "dc:creator") == 0) {
+        opf->in_author = true;
+        opf->author[0] = '\0';
+    }
+    else if (strcmp(name, "item") == 0) {
         manifest_item_t item = {0};
         for (int i = 0; atts[i]; i += 2) {
             if (strcmp(atts[i], "id") == 0) {
@@ -91,11 +107,24 @@ void start_opf(void *user_data, const char *name, const char **atts) {
     }
 }
 
+void end_opf(void *user_data, const char *name) {
+    opf_data_t *opf = (opf_data_t *)user_data;
+	
+    if (strcmp(name, "dc:title") == 0) {
+		opf->in_title = false;
+	}
+    if (strcmp(name, "dc:creator") == 0) {
+		opf->in_author = false;
+	}
+}
+
 // Parse content.opf
 void parse_opf(const char *xml, size_t len, opf_data_t *opf) {
     XML_Parser parser = XML_ParserCreate(NULL);
     XML_SetUserData(parser, opf);
-    XML_SetElementHandler(parser, start_opf, NULL);
+	
+    XML_SetElementHandler(parser, start_opf, end_opf);
+	XML_SetCharacterDataHandler(parser, char_data_opf);
 
     if (XML_Parse(parser, xml, len, 1) == XML_STATUS_ERROR) {
         fprintf(stderr, "XML Parse error (content.opf): %s\n",
@@ -103,6 +132,18 @@ void parse_opf(const char *xml, size_t len, opf_data_t *opf) {
 	}
 
     XML_ParserFree(parser);
+}
+
+// Pulls title or author
+void char_data_metadata(void *user_data, const char *s, int len) {
+	opf_data_t *opf = (opf_data_t *)user_data;
+    
+    if (data->in_title) {
+        strncat(data->title, s, len); 
+    } 
+    else if (data->in_author) {
+        strncat(data->author, s, len);
+    }
 }
 
 // TOC parser
@@ -201,12 +242,10 @@ int main() {
     static const char *file_name = "MobyDick.epub";
 	
     char *opf_path = find_opf_path(container_xml, container_size);
-    printf("Found OPF path: %s\n", opf_path);
 
     opf_data_t opf = {0};
     parse_opf(opf_xml, opf_size, &opf);
 
     free(opf_path);
-    printf("\n\n[Stopped after first chapter.]\n");
     return 0;
 }
