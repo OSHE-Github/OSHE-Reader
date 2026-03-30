@@ -4,19 +4,24 @@
 #include <ctype.h>
 #include <expat.h>
 
-// Stores path to content.opf
+// Path to content.opf
 typedef struct {
     char opf_path[256];
 } container_data_t;
 
-// Stores references to files in mantifest
+// References to files in mantifest
 typedef struct {
     char id[128];
     char href[256];
 } manifest_item_t;
 
-// 
+// Opf contents (metadata, manifest, spine)
 typedef struct {
+	char author[256];
+	char title[256];
+	bool in_title;
+	bool in_author;
+	
     manifest_item_t manifest[200];
     int manifest_count;
     char spine_ids[200][128];
@@ -25,14 +30,6 @@ typedef struct {
     char toc_href[256];	// Path to toc
 } opf_data_t;
 
-// Metadata from content.opf
-typefed struct {
-	char author[256];
-	char title[256];
-	bool in_title;
-	bool in_author;
-} book_metadata;
-
 // 
 typedef struct {
     toc_entry_t chapters[100];
@@ -40,18 +37,6 @@ typedef struct {
     bool in_text;
     char last_title[128];
 } ncx_data_t;
-
-// container.xml Parser
-void start_container(void *user_data, const char *name, const char **atts) {
-    container_data_t *data = (*container_data_t)user_data;
-    if (strcmp(name, "rootfile") == 0) {
-        for (int i = 0; atts[i]; i += 2) {
-            if (strcmp(atts[i], "full-path") == 0) {
-                strcpy(data->opf_path, atts[i + 1]);
-			}
-		}
-    }
-}
 
 // container.xml Parser
 void start_container(void *user_data, const char *name, const char **atts) {
@@ -83,11 +68,19 @@ char *find_opf_path(const char *xml, size_t len) {
 }
 
 // content.opf Parser
-// Scans manifest and spine
+// Scans for metadata, manifest, and spine
 void start_opf(void *user_data, const char *name, const char **atts) {
     opf_data_t *opf = (*opf_data_t)user_data;
 
-    if (strcmp(name, "item") == 0) {
+    if (strcmp(name, "dc:title") == 0) {
+        opf->in_title = true;
+        opf->title[0] = '\0';
+    } 
+    else if (strcmp(name, "dc:creator") == 0) {
+        opf->in_author = true;
+        opf->author[0] = '\0';
+    }
+    else if (strcmp(name, "item") == 0) {
         manifest_item_t item = {0};
         for (int i = 0; atts[i]; i += 2) {
             if (strcmp(atts[i], "id") == 0) {
@@ -114,11 +107,24 @@ void start_opf(void *user_data, const char *name, const char **atts) {
     }
 }
 
+void end_opf(void *user_data, const char *name) {
+    opf_data_t *opf = (opf_data_t *)user_data;
+	
+    if (strcmp(name, "dc:title") == 0) {
+		opf->in_title = false;
+	}
+    if (strcmp(name, "dc:creator") == 0) {
+		opf->in_author = false;
+	}
+}
+
 // Parse content.opf
 void parse_opf(const char *xml, size_t len, opf_data_t *opf) {
     XML_Parser parser = XML_ParserCreate(NULL);
     XML_SetUserData(parser, opf);
-    XML_SetElementHandler(parser, start_opf, NULL);
+	
+    XML_SetElementHandler(parser, start_opf, end_opf);
+	XML_SetCharacterDataHandler(parser, char_data_opf);
 
     if (XML_Parse(parser, xml, len, 1) == XML_STATUS_ERROR) {
         fprintf(stderr, "XML Parse error (content.opf): %s\n",
@@ -127,42 +133,16 @@ void parse_opf(const char *xml, size_t len, opf_data_t *opf) {
 
     XML_ParserFree(parser);
 }
-		
-// Starts search for relevant tags
-void start_metadata(void *user_data, const char *name, const char **atts) {
-    metadata_t *data = (metadata_t *)user_data;
-
-    if (strcmp(name, "dc:title") == 0) {
-        data->in_title = true;
-        data->title[0] = '\0';
-    } 
-    else if (strcmp(name, "dc:creator") == 0) {
-        data->in_author = true;
-        data->author[0] = '\0';
-    }
-}
 
 // Pulls title or author
 void char_data_metadata(void *user_data, const char *s, int len) {
-    metadata_t *data = (metadata_t *)user_data;
+	opf_data_t *opf = (opf_data_t *)user_data;
     
     if (data->in_title) {
         strncat(data->title, s, len); 
     } 
     else if (data->in_author) {
         strncat(data->author, s, len);
-    }
-}
-
-// Closes with seeing title or creator
-void end_metadata(void *user_data, const char *name) {
-    metadata_t *data = (metadata_t *)user_data;
-
-    if (strcmp(name, "dc:title") == 0) {
-        data->in_title = false;
-    } 
-    else if (strcmp(name, "dc:creator") == 0) {
-        data->in_author = false;
     }
 }
 
