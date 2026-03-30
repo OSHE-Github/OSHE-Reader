@@ -17,10 +17,10 @@ void display_next_page(){
   set_var_page_num(current + 1);
 
   if (active_book() == 1 ){ 
-    lv_label_set_text(objects.book_label, get_var_page_text(//buffer for book 1));
+    lv_label_set_text(objects.book_label, //buffer for book 1);
     past_pargraph_array = //buffer for book 1;
   }else if (active_book() == 2 ){
-    lv_label_set_text(objects.book_label, get_var_page_text(//buffer for book 2));
+    lv_label_set_text(objects.book_label, //buffer for book 2);
     past_pargraph_array = //buffer for book 2;
   }else{
     page_change_library(SCREEN_ID_BOOK);
@@ -33,7 +33,7 @@ void display_prev_page(){
  int32_t current = get_var_page_num();
  if (current > 0) {
    set_var_page_num(current - 1);
-   lv_label_set_text(objects.book_label, get_var_page_text(past_pargraph_array));   
+   lv_label_set_text(objects.book_label,past_pargraph_array);   
   }else {
     page_change_library(SCREEN_ID_BOOK);
   }
