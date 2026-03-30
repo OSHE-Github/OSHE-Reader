@@ -45,9 +45,9 @@
 
 //Uncomment and set up if you want to use custom pins for the SPI communication
 #define REASSIGN_PINS
-int sck = 21;
-int miso = 20;
-int mosi = 19;
+int sck = 6;
+int miso = 2;
+int mosi = 7;
 int cs = 18;
 
 

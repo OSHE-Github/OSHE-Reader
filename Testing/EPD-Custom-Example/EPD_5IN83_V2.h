@@ -1,12 +1,12 @@
 #define EPD_5IN83_V2_WIDTH 648
 #define EPD_5IN83_V2_HEIGHT 480
 
-#define EPD_SCK_PIN  13
-#define EPD_MOSI_PIN 14
-#define EPD_CS_PIN   15
-#define EPD_RST_PIN  26
-#define EPD_DC_PIN   27
-#define EPD_BUSY_PIN 25
+#define EPD_SCK_PIN  6
+#define EPD_MOSI_PIN 7
+#define EPD_CS_PIN   19
+#define EPD_RST_PIN  3
+#define EPD_DC_PIN   20
+#define EPD_BUSY_PIN 8
 
 void EPD_5IN83_V2_Reset(void);
 void EPD_5IN83_V2_SendCommand(uint8_t cmd);

@@ -14,7 +14,7 @@ void setup()
   pinMode(EPD_BUSY_PIN, INPUT);
 
   digitalWrite(EPD_CS_PIN, 1);
-  SPI.begin(EPD_SCK_PIN, 12, EPD_MOSI_PIN, EPD_CS_PIN);
+  SPI.begin(EPD_SCK_PIN, 3, EPD_MOSI_PIN, EPD_CS_PIN);
   
   EPD_5IN83_V2_Init();
   EPD_5IN83_V2_Clear();
@@ -46,6 +46,9 @@ void setup()
   }
 
   delay(10000);
+
+  Serial.println("ENDED");
+  return;
 
   EPD_5IN83_V2_Clear();
 
