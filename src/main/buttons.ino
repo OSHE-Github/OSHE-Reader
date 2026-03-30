@@ -76,7 +76,8 @@ void button_read(void)
   {
     if (lv_screen_active() == objects.library)
     {
-      /*TODO: change titles of books to previous 2 files*/
+      /*TODO: change titles of books to previous 2 files */
+      active_book(1);
     }
     else if (lv_screen_active() == objects.book)
     {
@@ -87,7 +88,8 @@ void button_read(void)
   {
     if (lv_screen_active() == objects.library)
     {
-      /*TODO: change titles of books to next 2 files*/
+      /*TODO: change titles of books to next 2 files */
+      active_book(2);
     }
     else if (lv_screen_active() == objects.book)
     {
