@@ -15,13 +15,11 @@ void display_next_page(){
 
   int32_t current = get_var_page_num();
   set_var_page_num(current + 1);
-  
-  char book1[100] = get_var_book_1();
-  char book2[100]= get_var_book_2();
-  if (book1 != 0 && active_book() == 1 ){ 
+
+  if (active_book() == 1 ){ 
     lv_label_set_text(objects.book_label, get_var_page_text(//buffer for book 1));
     past_pargraph_array = //buffer for book 1;
-  }else if (book2 != 0 && active_book() == 2 ){
+  }else if (active_book() == 2 ){
     lv_label_set_text(objects.book_label, get_var_page_text(//buffer for book 2));
     past_pargraph_array = //buffer for book 2;
   }else{
