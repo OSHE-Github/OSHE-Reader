@@ -45,3 +45,5 @@ out/
 
 # End of https://www.toptal.com/developers/gitignore/api/kicad
 
+# KiCad 10's new autosave directory
+.history/
