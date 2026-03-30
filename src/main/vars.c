@@ -1,5 +1,7 @@
 #include <string.h>
 #include <vars.h>
+#include <buttons.h>
+#include <buttons.h>
 
 /* LIGHT/DARK MODE TOGGLE SETTING */
 bool light_mode;
