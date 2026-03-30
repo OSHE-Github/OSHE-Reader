@@ -54,3 +54,7 @@ void set_var_book_2(const char *value) {
     strncpy(book_2, value, sizeof(book_2) / sizeof(char));
     book_2[sizeof(book_2) / sizeof(char) - 1] = 0;
 }
+
+int active_book(int bookPick){
+    return bookPick;
+}
