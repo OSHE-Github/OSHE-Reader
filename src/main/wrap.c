@@ -25,7 +25,7 @@ void display_next_page(){
   }else{
     page_change_library(SCREEN_ID_BOOK);
   }
-  //lv_label_set_text(objects.book_label, get_var_page_text(//buffer for book )); past_pargraph_array = //buffer for book;
+  //lv_label_set_text(objects.book_label, //buffer for book); past_pargraph_array = //buffer for book;
 }
 
 void display_prev_page(){
