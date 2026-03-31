@@ -1,7 +1,6 @@
 #include <string.h>
 #include <vars.h>
 #include <buttons.h>
-#include <buttons.h>
 
 /* LIGHT/DARK MODE TOGGLE SETTING */
 bool light_mode;
@@ -14,17 +13,18 @@ void set_var_light_mode(bool value) {
 }
 
 /* PAGE NUMBERING */
-int32_t page_num;
-int32_t get_var_page_num() {
+char page_num[100] = { 0 };
+const char *get_var_page_num() {
     return page_num;
 }
 
-void set_var_page_num(int32_t value) {
-    page_num = value;
+void set_var_page_num(const char *value) {
+    strncpy(page_num, value, sizeof(page_num) / sizeof(char));
+    page_num[sizeof(page_num) / sizeof(char) - 1] = 0;
 }
 
 /* DISPLAYING PAGE */
-char page_text[1024] = { 0 };
+char page_text[10] = { 0 };
 const char *get_var_page_text() {
     return page_text;
 }
@@ -53,8 +53,4 @@ const char *get_var_book_2() {
 void set_var_book_2(const char *value) {
     strncpy(book_2, value, sizeof(book_2) / sizeof(char));
     book_2[sizeof(book_2) / sizeof(char) - 1] = 0;
-}
-
-int active_book(int bookPick){
-    return bookPick;
 }

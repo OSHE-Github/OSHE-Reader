@@ -1,101 +1,116 @@
-#include <buttons.h>
-#include <lvgl.h>
-#include <actions.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <ui.h>
-#include <vars.h>
-#include <wrap.h>
+#include "buttons.h"
+#include <Button2.h>
+#include "lvgl.h"
+#include "actions.h"
+#include "ui.h"
+#include "vars.h"
+#include "wrap.h"
+
+extern OneButton button1, button2, button3, button4, button5;
 
 void button_init(void)
 {
-  pinMode(BUTTON1, INPUT);
-  pinMode(BUTTON2, INPUT);
-  pinMode(BUTTON3, INPUT);
-  pinMode(BUTTON4, INPUT);
-  pinMode(BUTTON5, INPUT);
+  button1.attachClick(button1_press);
+  button2.attachClick(button2_press);
+  button3.attachClick(button3_press);
+  button3.attachLongPressStart(button3_long_press);
+  button4.attachClick(button4_press);
+  button5.attachClick(button5_press);
 }
 
-void button_read(void)
+void button1_press()
 {
-  delay(30);
-  if (digitalRead(BUTTON1) == HIGH)       // Top left rocker button pressed
+  if (lv_screen_active() == objects.main)
   {
-    if (lv_screen_active() == objects.main)
-    {
-      page_change_settings(SCREEN_ID_MAIN);
-    }
-    else if (lv_screen_active() == objects.settings)
-    {
-      light_mode_toggle(1);
-    }
-    else if (lv_screen_active() == objects.library)
-    {
-      page_change_book();
-    }
-    else if (lv_screen_active() == objects.book)
-    {
-      display_prev_page();
-    }
+    page_change_settings(SCREEN_ID_MAIN);
   }
-  else if (digitalRead(BUTTON2) == HIGH)  // Top right rocker button pressed
+  else if (lv_screen_active() == objects.settings)
   {
-    if (lv_screen_active() == objects.main)
-    {
-      page_change_library(SCREEN_ID_MAIN);
-    }
-    else if (lv_screen_active() == objects.settings)
-    {
-      light_mode_toggle(0);
-    }
-    else if (lv_screen_active() == objects.library)
-    {
-      page_change_book();
-    }
-    else if (lv_screen_active() == objects.book)
-    {
-      display_prev_page();
-    }
+    light_mode_toggle(1);
   }
-  else if (digitalRead(BUTTON3) == HIGH)    // Center (home) button pressed
+  else if (lv_screen_active() == objects.library)
   {
-    if (lv_screen_active() == objects.settings)
-    {
-      page_change_main(SCREEN_ID_SETTINGS);
-    }
-    else if (lv_screen_active() == objects.library)
-    {
-      page_change_main(SCREEN_ID_LIBRARY);
-    }
-    else if (lv_screen_active() == objects.book)
-    {
-      page_change_main(SCREEN_ID_BOOK);
-    }
+    page_change_book(SCREEN_ID_LIBRARY);
+    set_var_page_text(lorem);
+    set_var_page_num("1");
+    tick_screen_book();
   }
-  else if (digitalRead(BUTTON4) == HIGH)    // Bottom left rocker button pressed
+  else if (lv_screen_active() == objects.book)
   {
-    if (lv_screen_active() == objects.library)
-    {
-      /*TODO: change titles of books to previous 2 files */
-      active_book(1);
-    }
-    else if (lv_screen_active() == objects.book)
-    {
-      display_next_page();
-    }
+    display_prev_page();
   }
-  else if (digitalRead(BUTTON5) == HIGH)    // Bottom right rocker button pressed
+}
+
+void button2_press()
+{
+  if (lv_screen_active() == objects.main)
   {
-    if (lv_screen_active() == objects.library)
-    {
-      /*TODO: change titles of books to next 2 files */
-      active_book(2);
-    }
-    else if (lv_screen_active() == objects.book)
-    {
-      display_next_page();
-    }
+    page_change_library(SCREEN_ID_MAIN);
   }
+  else if (lv_screen_active() == objects.settings)
+  {
+    light_mode_toggle(0);
+  }
+  else if (lv_screen_active() == objects.library)
+  {
+    page_change_book(SCREEN_ID_LIBRARY);
+    set_var_page_text(lorem);
+    set_var_page_num("1");
+    tick_screen_book();
+  }
+  else if (lv_screen_active() == objects.book)
+  {
+    display_prev_page();
+  }
+}
+
+void button3_press()
+{
+  if (lv_screen_active() == objects.settings)
+  {
+    page_change_main(SCREEN_ID_SETTINGS);
+  }
+  else if (lv_screen_active() == objects.library)
+  {
+    page_change_main(SCREEN_ID_LIBRARY);
+  }
+  else if (lv_screen_active() == objects.book)
+  {
+    page_change_library(SCREEN_ID_BOOK);
+  }
+}
+
+void button4_press()
+{
+  if (lv_screen_active() == objects.library)
+  {
+    /*TODO: change titles of books to previous 2 files */
+    //set_active_book(1);
+  }
+  else if (lv_screen_active() == objects.book)
+  {
+    display_next_page();
+  }
+}
+
+void button5_press()
+{
+  if (lv_screen_active() == objects.library)
+  {
+    /*TODO: change titles of books to next 2 files */
+    //set_active_book(2);
+  }
+  else if (lv_screen_active() == objects.book)
+  {
+    display_next_page();
+  }
+}
+
+void button3_long_press()
+{
+  /*sleepy time :)*/
 }
 
 void page_change_main(enum ScreensEnum old_screen)

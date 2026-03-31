@@ -1,3 +1,5 @@
+#include <OneButton.h>
+#include <wrap.h>
 // SCREEN
 #include <EPD_5IN83_V2.h>
 // UI
@@ -19,6 +21,15 @@
 #define SCREEN_HOR 648
 #define SCREEN_VER 480
 #define BUFFER_SIZE (SCREEN_HOR * SCREEN_VER / 8)
+
+OneButton button1(BUTTON1, false, false);
+OneButton button2(BUTTON2, false, false);
+OneButton button3(BUTTON3, false, false);
+OneButton button4(BUTTON4, false, false);
+OneButton button5(BUTTON5, false, false);
+
+char *lorem = "Lorem";
+char *ipsum = "Ipsum";
 
 void setup()
 {
@@ -55,8 +66,12 @@ void loop()
 {
   lv_timer_handler();   // LVGL timer
   ui_tick();            // EEZ studio timer
+  button1.tick();
+  button2.tick();
+  button3.tick();
+  button4.tick();
+  button5.tick();
   sleep(10);
-  button_read();
 }
 
 uint32_t get_millis(void)
