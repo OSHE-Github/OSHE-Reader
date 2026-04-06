@@ -254,6 +254,156 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Schottky diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Graphic:Logo_Open_Hardware_Small"
 			(exclude_from_sim no)
 			(in_bom no)
@@ -712,12 +862,6 @@
 		(uuid "040c9f12-5763-4a54-9dca-1875d4e7b907")
 	)
 	(junction
-		(at 114.3 129.54)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "29136a5a-deab-4772-aacf-43610580c2ca")
-	)
-	(junction
 		(at 186.69 129.54)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -734,6 +878,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "86097bcd-a704-472f-aedc-d659d89cdb1c")
+	)
+	(junction
+		(at 101.6 129.54)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "959274e1-6527-4b71-82a9-479d7d2d1bdd")
 	)
 	(junction
 		(at 33.02 140.97)
@@ -780,6 +930,16 @@
 			(type default)
 		)
 		(uuid "095ee803-2266-44d7-b5c2-8de6b579bed9")
+	)
+	(wire
+		(pts
+			(xy 101.6 129.54) (xy 102.87 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bc05a76-5899-4c4f-b7e8-60cb6ceb202a")
 	)
 	(wire
 		(pts
@@ -840,16 +1000,6 @@
 			(type default)
 		)
 		(uuid "2e06ea5b-b8f0-4b95-9298-8295d6f14c98")
-	)
-	(wire
-		(pts
-			(xy 100.33 129.54) (xy 114.3 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "34e109ec-78c2-4d08-ac9c-afde26fd9626")
 	)
 	(wire
 		(pts
@@ -943,7 +1093,7 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 129.54) (xy 116.84 129.54)
+			(xy 110.49 129.54) (xy 116.84 129.54)
 		)
 		(stroke
 			(width 0)
@@ -973,7 +1123,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 129.54) (xy 90.17 129.54)
+			(xy 83.82 129.54) (xy 87.63 129.54)
 		)
 		(stroke
 			(width 0)
@@ -1053,6 +1203,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 121.92) (xy 101.6 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94bc4c80-2c17-43dd-8903-86bf5a3341a9")
+	)
+	(wire
+		(pts
 			(xy 142.24 86.36) (xy 144.78 86.36)
 		)
 		(stroke
@@ -1110,16 +1270,6 @@
 			(type default)
 		)
 		(uuid "adc4007e-e8e6-42db-9608-be4f37a41d92")
-	)
-	(wire
-		(pts
-			(xy 114.3 127) (xy 114.3 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "add41c7e-e56b-498f-b083-99de89f5e79f")
 	)
 	(wire
 		(pts
@@ -1340,6 +1490,16 @@
 			(type default)
 		)
 		(uuid "f4ed3e64-29a3-4b66-abd0-0860f5b2f6ce")
+	)
+	(wire
+		(pts
+			(xy 97.79 129.54) (xy 101.6 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa94522d-1660-4f6c-a662-2931623b7f10")
 	)
 	(wire
 		(pts
@@ -1975,7 +2135,7 @@
 	)
 	(symbol
 		(lib_id "0ZCJ0050FF2G:0ZCJ0050FF2G")
-		(at 90.17 129.54 0)
+		(at 87.63 129.54 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1984,7 +2144,7 @@
 		(fields_autoplaced yes)
 		(uuid "55c059a8-15a4-48cf-a1e1-4e6584b553d8")
 		(property "Reference" "F1"
-			(at 95.25 123.19 0)
+			(at 92.71 123.19 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -1992,7 +2152,7 @@
 			)
 		)
 		(property "Value" "0ZCJ0050FF2G"
-			(at 95.25 125.73 0)
+			(at 92.71 125.73 0)
 			(effects
 				(font
 					(size 1.524 1.524)
@@ -2000,7 +2160,7 @@
 			)
 		)
 		(property "Footprint" "0ZCJ0050FF2G:0ZCJ_BEL"
-			(at 90.17 129.54 0)
+			(at 87.63 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2010,7 +2170,7 @@
 			)
 		)
 		(property "Datasheet" "0ZCJ0050FF2G"
-			(at 90.17 129.54 0)
+			(at 87.63 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2020,7 +2180,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 90.17 129.54 0)
+			(at 87.63 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2574,6 +2734,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 106.68 129.54 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af643fb1-900e-45c4-9c51-c067f89147cd")
+		(property "Reference" "D4"
+			(at 106.9975 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D_Schottky"
+			(at 106.9975 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
+			(at 106.68 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 106.68 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Schottky diode"
+			(at 106.68 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a3ca7365-3e49-43dd-a248-84562e455a72")
+		)
+		(pin "1"
+			(uuid "a3044f9e-68ba-4b6d-aa87-ce10a79f72b5")
+		)
+		(instances
+			(project ""
+				(path "/3f072c92-e35a-4654-839b-728bd3dc3a46"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 38.1 63.5 0)
 		(unit 1)
@@ -2641,7 +2869,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 114.3 127 0)
+		(at 101.6 121.92 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -2650,7 +2878,7 @@
 		(dnp no)
 		(uuid "b8ad9058-9fd1-41c1-81b9-523e5a1e85f8")
 		(property "Reference" "TP_VBUS1"
-			(at 118.364 118.3639 0)
+			(at 105.664 113.2839 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2659,7 +2887,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 118.364 120.9039 0)
+			(at 105.664 115.8239 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2668,7 +2896,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_Keystone_5019_Miniature"
-			(at 109.22 127 0)
+			(at 96.52 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2677,7 +2905,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 109.22 127 0)
+			(at 96.52 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2686,7 +2914,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 114.3 127 0)
+			(at 101.6 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
