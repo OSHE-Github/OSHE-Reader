@@ -505,13 +505,14 @@
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.2,
+        "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
       }
     ],
     "meta": {
-      "version": 4
+      "version": 5
     },
     "net_colors": null,
     "netclass_assignments": null,
@@ -666,16 +667,16 @@
       {
         "filename": "OSHE-Reader-PCB.kicad_sch",
         "name": "OSHE-Reader-PCB",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "3f072c92-e35a-4654-839b-728bd3dc3a46"
       }
     ],
-    "used_designators": "",
+    "used_designators": "D4",
     "variants": []
   },
   "sheets": [
     [
       "3f072c92-e35a-4654-839b-728bd3dc3a46",
-      "Root"
+      "OSHE-Reader-PCB"
     ],
     [
       "026272d1-c63e-4075-9457-2aa47fc1f981",
