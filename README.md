@@ -1,11 +1,17 @@
-# **![][/Media/OSHE-Logo.png]**
+<p float="left">
+  <img src="/Media/OSHE-Logo.png" width="300px" />
+</p>
 
 # **OSHE-Reader Spring 2026 Report**
 
 Ian Mitchell, Riley Patterson, Owen Dodson, Ian Ranstadler, Alycia Greer  
 ---
 
-# **![][/Media/OSHE-Reader-Teardown.png]![][/Media/OSHE-Reader-Assembled.png]**
+<p float="left">
+  <img src="/Media/OSHE-Reader-Teardown.png" width="300px" />
+  <img src="/Media/OSHE-Reader-Assembled.jpg" width="300px" /> 
+</p>
+
 
 # **Description**
 
@@ -164,7 +170,8 @@ The past semester we started the schematic on the components for the PCB includi
 | 0.47 Resistor | KDV12DR470ET | Digikey | $0.28 | 1 | $0.28 |
 | 0.2 Ohm Shunt Resistor | WSL2512R2000FEA | Digikey | $0.65 | 2 | $1.30 |
 
-## **E-Reader Cost Breakdown![][Media/OSHE-Reader-Cost-Breakdown.png]**
+## **E-Reader Cost Breakdown
+![](Media/OSHE-Reader-Cost-Breakdown.png)**
 
 # **Tools Used**
 
@@ -207,7 +214,7 @@ All case pieces must be 3D-printed, which includes the front panel, back panel, 
 
 # **Characteristic Data**
 
-![][/Media/OSHE-Reader-Battery-Charge-Data.png]  
+![](/Media/OSHE-Reader-Battery-Charge-Data.png)  
 The above graph shows an example of our safe battery charging circuit. On the horizontal axis the duration of the charging cycle is displayed in minutes, and on the vertical axis, the battery’s voltage level. During a charging cycle, the battery charging chip will start the battery in current regulation mode, where a set amount of current (\~100mA for our design) is driven into the battery, once a voltage threshold is reached, the battery charger initiates the voltage regulation mode, where the charging voltage is instead held steady and the charging current gradually decreases (not pictured). Finally, after the charging current reaches a minimum threshold, all charging stops automatically to prevent overcharging, at which point the battery is fully charged.
 
 # **References**
