@@ -170,7 +170,7 @@ The past semester we started the schematic on the components for the PCB includi
 | 0.47 Resistor | KDV12DR470ET | Digikey | $0.28 | 1 | $0.28 |
 | 0.2 Ohm Shunt Resistor | WSL2512R2000FEA | Digikey | $0.65 | 2 | $1.30 |
 
-## **E-Reader Cost Breakdown
+## **E-Reader Cost Breakdown **
 ![](Media/OSHE-Reader-Cost-Breakdown.png)**
 
 # **Tools Used**
