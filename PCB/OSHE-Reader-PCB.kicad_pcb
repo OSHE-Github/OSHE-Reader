@@ -87,5 +87,16 @@
 			(outputdirectory "")
 		)
 	)
+	(gr_rect
+		(start 92 38)
+		(end 192 138)
+		(stroke
+			(width 0.2)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Cu")
+		(uuid "c9a5d135-9df3-4ce6-88e4-3401d173dcf2")
+	)
 	(embedded_fonts no)
 )
