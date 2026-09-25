@@ -686,7 +686,7 @@
         "uuid": "f297096e-4a95-4c17-b91a-21f33415233d"
       }
     ],
-    "used_designators": "D4,U1",
+    "used_designators": "home_button1,bottom_left_button1,D4,bottom_right_button1,U1,J1,SW1-5,display_connector1,top_left_button1,top_right_button1",
     "variants": []
   },
   "sheets": [

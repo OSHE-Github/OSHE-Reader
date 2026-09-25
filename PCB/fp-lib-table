@@ -1,0 +1,5 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "Adafruit 3983") (type "KiCad") (uri "${KIPRJMOD}/lib/3983/footprints.pretty") (options "") (descr ""))
+	(lib (name "BQ25616RTWR") (type "KiCad") (uri "${KIPRJMOD}/lib/BQ25616RTWR/footprints.pretty") (options "") (descr ""))
+)
