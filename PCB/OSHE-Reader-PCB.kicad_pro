@@ -628,6 +628,48 @@
           "label": "#",
           "name": "${ITEM_NUMBER}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PACKAGE",
+          "name": "PACKAGE",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PRICE",
+          "name": "PRICE",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PURCHASE-URL",
+          "name": "PURCHASE-URL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "AVAILABILITY",
+          "name": "AVAILABILITY",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MF",
+          "name": "MF",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MP",
+          "name": "MP",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -686,7 +728,7 @@
         "uuid": "f297096e-4a95-4c17-b91a-21f33415233d"
       }
     ],
-    "used_designators": "D1-8,bottom_left_button1-2,home_button1-2,U1,bottom_right_button1-2,J1,SW1-5,display_connector1,TH1,top_left_button1-2,top_right_button1-2,battery_manager1,C1-15,front_light_connector1,to_battery1,to_usb_c1,#PWR1-23,L1-2,Q1,R1-15,C14*1",
+    "used_designators": "D1-8,bottom_left_button1-2,home_button1-2,U1-2,bottom_right_button1-2,J1,SW1-5,display_connector1,TH1,top_left_button1-2,top_right_button1-2,battery_manager1,C1-18,front_light_connector1,to_battery1,to_usb_c1,#PWR1-32,L1-3,Q1-3,R1-19,C14*1",
     "variants": []
   },
   "sheets": [
