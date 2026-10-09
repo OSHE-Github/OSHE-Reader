@@ -3791,7 +3791,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "856e9570-13fa-40ea-9e2b-8bec06df5989")
-		(property "Reference" "C14"
+		(property "Reference" "C14*1"
 			(at 189.484 59.436 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3855,7 +3855,7 @@
 		(instances
 			(project "OSHE-Reader-PCB"
 				(path "/f297096e-4a95-4c17-b91a-21f33415233d/19ff0f63-9681-4c6b-a2bd-4960ed29c85f"
-					(reference "C14")
+					(reference "C14*1")
 					(unit 1)
 				)
 			)

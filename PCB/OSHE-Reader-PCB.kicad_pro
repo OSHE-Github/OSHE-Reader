@@ -686,7 +686,7 @@
         "uuid": "f297096e-4a95-4c17-b91a-21f33415233d"
       }
     ],
-    "used_designators": "home_button1-2,bottom_left_button1-2,D1-8,bottom_right_button1-2,U1,J1,SW1-5,TH1,display_connector1,top_left_button1-2,top_right_button1-2,C1-15,battery_manager1,front_light_connector1,to_battery1,to_usb_c1,#PWR1-23,L1-2,Q1,R1-15",
+    "used_designators": "D1-8,bottom_left_button1-2,home_button1-2,U1,bottom_right_button1-2,J1,SW1-5,display_connector1,TH1,top_left_button1-2,top_right_button1-2,battery_manager1,C1-15,front_light_connector1,to_battery1,to_usb_c1,#PWR1-23,L1-2,Q1,R1-15,C14*1",
     "variants": []
   },
   "sheets": [
