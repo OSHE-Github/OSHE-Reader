@@ -686,13 +686,21 @@
         "uuid": "f297096e-4a95-4c17-b91a-21f33415233d"
       }
     ],
-    "used_designators": "home_button1-2,bottom_left_button1-2,D1-4,bottom_right_button1-2,U1,J1,SW1-5,display_connector1,top_left_button1-2,top_right_button1-2,C8-10,battery_manager1,front_light_connector1,to_battery1,to_usb_c1,#PWR3-17,L1,Q1,R1-12",
+    "used_designators": "home_button1-2,bottom_left_button1-2,D1-8,bottom_right_button1-2,U1,J1,SW1-5,TH1,display_connector1,top_left_button1-2,top_right_button1-2,C1-15,battery_manager1,front_light_connector1,to_battery1,to_usb_c1,#PWR1-23,L1-2,Q1,R1-15",
     "variants": []
   },
   "sheets": [
     [
       "f297096e-4a95-4c17-b91a-21f33415233d",
       ""
+    ],
+    [
+      "19ff0f63-9681-4c6b-a2bd-4960ed29c85f",
+      "Battery Charger"
+    ],
+    [
+      "fa4c974d-1ce5-425f-baa2-1d567948100b",
+      "Display + Front Light"
     ]
   ],
   "text_variables": {},
