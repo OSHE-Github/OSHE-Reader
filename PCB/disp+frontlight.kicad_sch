@@ -4783,7 +4783,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 49.53 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -5031,7 +5031,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 223.52 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -5113,7 +5113,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 73.66 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -5195,7 +5195,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 26.67 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -5433,7 +5433,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm"
+		(property "Footprint" "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder"
 			(at 33.02 143.51 0)
 			(hide yes)
 			(show_name no)
@@ -5591,7 +5591,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Relay_THT:Relay_DPDT_Finder_30.22"
+		(property "Footprint" "Inductor_SMD:L_1206_3216Metric_Pad1.22x1.90mm_HandSolder"
 			(at 151.13 33.02 0)
 			(hide yes)
 			(show_name no)
@@ -5828,7 +5828,7 @@
 				)
 			)
 		)
-		(property "Footprint" "U_DRL0006A_6L_TEX"
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
 			(at 130.81 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -6229,7 +6229,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
 			(at 66.04 139.065 0)
 			(hide yes)
 			(show_name no)
@@ -6387,7 +6387,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
 			(at 208.28 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -6477,7 +6477,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 119.38 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -6559,7 +6559,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 127 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -6719,7 +6719,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 223.52 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -6799,7 +6799,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 205.74 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -6977,7 +6977,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 190.5 138.43 0)
 			(hide yes)
 			(show_name no)
@@ -7059,7 +7059,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70"
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 49.53 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -7465,7 +7465,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 179.07 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -7860,7 +7860,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 114.3 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -8020,7 +8020,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
 			(at 40.64 170.18 0)
 			(hide yes)
 			(show_name no)
@@ -8256,7 +8256,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
 			(at 66.04 132.715 0)
 			(hide yes)
 			(show_name no)
@@ -8503,7 +8503,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SOD-123"
+		(property "Footprint" "Diode_SMD:D_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
 			(at 66.04 131.445 0)
 			(hide yes)
 			(show_name no)
@@ -8584,7 +8584,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
 			(at 187.96 50.8 0)
 			(hide yes)
 			(show_name no)
