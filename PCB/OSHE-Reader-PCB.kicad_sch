@@ -3058,7 +3058,7 @@
 		)
 		(uuid "1f782e34-7a49-42e1-a23e-44ec1106e83a")
 	)
-	(label "BL_button"
+	(label "TL_button"
 		(at 72.39 59.69 180)
 		(effects
 			(font
@@ -3198,7 +3198,7 @@
 		)
 		(uuid "7297f1eb-59ee-4ece-b0ef-f866aa142243")
 	)
-	(label "TL_button"
+	(label "BL_button"
 		(at 72.39 62.23 180)
 		(effects
 			(font
