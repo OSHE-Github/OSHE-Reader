@@ -2916,7 +2916,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "D_Schottky_Small_Filled"
+		(property "Value" "MBR0530"
 			(at 151.13 61.9759 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3398,7 +3398,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "612a9cd7-5695-4342-87b1-835f6fa33074")
-		(property "Reference" "R9"
+		(property "Reference" "10k"
 			(at 209.804 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3460,7 +3460,7 @@
 		(instances
 			(project "OSHE-Reader-PCB"
 				(path "/f297096e-4a95-4c17-b91a-21f33415233d/19ff0f63-9681-4c6b-a2bd-4960ed29c85f"
-					(reference "R9")
+					(reference "10k")
 					(unit 1)
 				)
 			)
@@ -4105,7 +4105,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9b39e6ff-5a19-49e1-869e-5b2070f1c6de")
-		(property "Reference" "R8"
+		(property "Reference" "10k"
 			(at 216.916 99.314 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4167,7 +4167,7 @@
 		(instances
 			(project "OSHE-Reader-PCB"
 				(path "/f297096e-4a95-4c17-b91a-21f33415233d/19ff0f63-9681-4c6b-a2bd-4960ed29c85f"
-					(reference "R8")
+					(reference "10k")
 					(unit 1)
 				)
 			)
@@ -4335,7 +4335,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c6b8493c-2f4e-4ab2-bb85-9dce0dc837e5")
-		(property "Reference" "R11"
+		(property "Reference" "10k"
 			(at 61.214 81.534 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4397,7 +4397,7 @@
 		(instances
 			(project "OSHE-Reader-PCB"
 				(path "/f297096e-4a95-4c17-b91a-21f33415233d/19ff0f63-9681-4c6b-a2bd-4960ed29c85f"
-					(reference "R11")
+					(reference "10k")
 					(unit 1)
 				)
 			)
@@ -4414,7 +4414,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cb68cf84-e7b0-4628-b4a2-d67b5e7a5d55")
-		(property "Reference" "R10"
+		(property "Reference" "10k"
 			(at 60.96 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4476,7 +4476,7 @@
 		(instances
 			(project "OSHE-Reader-PCB"
 				(path "/f297096e-4a95-4c17-b91a-21f33415233d/19ff0f63-9681-4c6b-a2bd-4960ed29c85f"
-					(reference "R10")
+					(reference "10k")
 					(unit 1)
 				)
 			)
