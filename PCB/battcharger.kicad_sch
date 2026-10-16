@@ -3339,7 +3339,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_EH_B11B-EH-A_1x11_P2.50mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical"
 			(at 177.8 92.71 0)
 			(hide yes)
 			(show_name no)
