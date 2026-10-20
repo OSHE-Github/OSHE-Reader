@@ -2964,7 +2964,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "31.14k"
 			(at 170.18 99.0599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3215,7 +3215,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "5.3k"
 			(at 170.18 88.8999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3295,8 +3295,8 @@
 				)
 			)
 		)
-		(property "Value" "Thermistor"
-			(at 180.594 87.884 90)
+		(property "Value" "10k"
+			(at 178.562 95.25 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3374,7 +3374,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "680"
 			(at 206.502 107.95 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4081,7 +4081,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "680"
 			(at 213.614 99.314 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4311,8 +4311,8 @@
 				)
 			)
 		)
-		(property "Value" "1k"
-			(at 57.912 81.534 90)
+		(property "Value" "2.26k"
+			(at 56.642 81.534 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4390,7 +4390,7 @@
 				)
 			)
 		)
-		(property "Value" "1.5k"
+		(property "Value" "953"
 			(at 56.642 91.44 90)
 			(show_name no)
 			(do_not_autoplace no)
