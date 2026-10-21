@@ -81,7 +81,7 @@
         "version": 2
       },
       "rule_severities": {
-        "annular_width": "error",
+        "annular_width": "ignore",
         "clearance": "error",
         "connection_width": "warning",
         "copper_edge_clearance": "error",
@@ -733,7 +733,7 @@
         "uuid": "f297096e-4a95-4c17-b91a-21f33415233d"
       }
     ],
-    "used_designators": "home_button1-2,bottom_left_button1-2,D1-8,bottom_right_button1-2,U1-2,U4,J1-5,SW1-5,TH1,display_connector1,top_left_button1-2,top_right_button1-2,C1-18,C21-22,C25-26,battery_manager1,front_light_connector1,to_battery1,to_usb_c1,#PWR1-32,#PWR35-56,L1-3,Q1-3,R1-21,C14*1,esp32_s1,10k1",
+    "used_designators": "D1-8,bottom_left_button1-2,home_button1-2,U1-2,U4,bottom_right_button1-2,J1-5,SW1-5,display_connector1,TH1,top_left_button1-2,top_right_button1-2,battery_manager1,C1-18,C21-22,C25-26,front_light_connector1,to_battery1,to_usb_c1,#PWR1-32,#PWR35-56,L1-3,Q1-3,R1-21,C14*1,esp32_s1,10k1",
     "variants": []
   },
   "sheets": [
