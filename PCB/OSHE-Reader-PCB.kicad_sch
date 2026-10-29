@@ -5168,6 +5168,10 @@
 		(uuid "2f890696-2b5d-43fe-b411-9b5d6f0e392a")
 	)
 	(no_connect
+		(at 60.96 58.42)
+		(uuid "3de974cd-f01f-4fa7-9ce0-401e487cb5db")
+	)
+	(no_connect
 		(at 247.65 85.09)
 		(uuid "3e2a8242-e012-4f2e-873c-96b5d8d7f658")
 	)
@@ -5232,20 +5236,12 @@
 		(uuid "c2d7d1de-143c-4599-8afc-61cf89f23f0c")
 	)
 	(no_connect
-		(at 60.96 58.42)
-		(uuid "c545fcac-e8f6-47d4-8d63-d6f4b9765ca4")
-	)
-	(no_connect
 		(at 91.44 66.04)
 		(uuid "d928d2d5-803a-47fc-951a-564579c29d0a")
 	)
 	(no_connect
 		(at 247.65 128.27)
 		(uuid "e2870108-46ad-4431-a6d4-592f1fec9b1c")
-	)
-	(no_connect
-		(at 91.44 50.8)
-		(uuid "fbada95f-4d97-4e3c-8e58-489fce950c6f")
 	)
 	(no_connect
 		(at 91.44 83.82)
@@ -6170,6 +6166,16 @@
 			(justify left bottom)
 		)
 		(uuid "32b3977e-feed-44cb-94bc-1c156356d3c9")
+	)
+	(label "LED_MONIT"
+		(at 91.44 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "336be4bf-24c8-4fee-86e1-d5f6698084c3")
 	)
 	(label "TR_button"
 		(at 86.36 176.53 270)
