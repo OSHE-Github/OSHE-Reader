@@ -14238,7 +14238,7 @@
 		(property "Reference" "to_battery1"
 			(at 0 -5.8 0)
 			(layer "F.SilkS")
-			(uuid "8a95e789-c641-47fd-afe3-f06de2f57501")
+			(uuid "088b9107-9d26-4521-a29b-e1acc13885af")
 			(effects
 				(font
 					(size 1.016 1)
@@ -14249,7 +14249,7 @@
 		(property "Value" "Conn_01x02_MountingPin"
 			(at 0 5.8 0)
 			(layer "F.Fab")
-			(uuid "39e4a6d4-8187-42d1-b654-c6150e4ea695")
+			(uuid "b369ef00-ee5d-43a0-8af5-83e72d004075")
 			(effects
 				(font
 					(size 1.016 1)
@@ -14261,7 +14261,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "88a751c5-9603-4b0e-bb8c-21d56073168f")
+			(uuid "71b9c9f1-2c20-42ff-9b9b-764e179c3420")
 			(effects
 				(font
 					(size 1.016 1.27)
@@ -14273,7 +14273,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "94380d6c-2cbc-4300-9c3a-601048ea9713")
+			(uuid "0052b4dc-a46c-4e09-9ba3-6b81ec7f45ba")
 			(effects
 				(font
 					(size 1.016 1.27)
@@ -14691,7 +14691,7 @@
 			(size 1 3.5)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/BAT-")
+			(net "GND")
 			(pinfunction "Pin_2_2")
 			(pintype "passive")
 			(uuid "d4832fb8-4d61-4f0e-8fb0-88dfa215b0bd")
@@ -15178,7 +15178,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "D_Schottky_Small_Filled"
 			(at 1 2 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -19794,6 +19794,14 @@
 		(uuid "6a7883da-5392-47e1-acc3-a08441ff5f36")
 	)
 	(segment
+		(start 125 55)
+		(end 125 58.409364)
+		(width 0.2)
+		(layer "F.Cu")
+		(net "GND")
+		(uuid "7347f835-b130-4307-88af-52057addd222")
+	)
+	(segment
 		(start 86.845 51.23)
 		(end 88.23 51.23)
 		(width 0.254)
@@ -20592,6 +20600,15 @@
 		(layers "F.Cu" "B.Cu")
 		(net "GND")
 		(uuid "ce41edce-262e-4444-a3b8-aa2cbc4d6c9e")
+	)
+	(via
+		(at 125 55)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(free yes)
+		(net "GND")
+		(uuid "cf2fa676-a6ee-4a62-abab-f6fd8767af14")
 	)
 	(via
 		(at 118 118.559364)

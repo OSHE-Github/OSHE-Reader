@@ -6069,6 +6069,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 83.82) (xy 163.83 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f847dc97-7c5f-4f88-ad54-aaf744c611a4")
+	)
+	(wire
+		(pts
 			(xy 102.87 143.51) (xy 106.68 143.51)
 		)
 		(stroke
@@ -6226,16 +6236,6 @@
 			(justify right bottom)
 		)
 		(uuid "5603bb5c-8ddb-4f28-981f-775d87a02ddb")
-	)
-	(label "BAT-"
-		(at 163.83 83.82 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "5e0c5918-4c34-4409-ba5c-52a50cbc512f")
 	)
 	(label "HOME_button"
 		(at 60.96 71.12 180)
@@ -9436,6 +9436,84 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 161.29 83.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a75aed93-a2b5-481d-8412-49746676344f")
+		(property "Reference" "#PWR07"
+			(at 161.29 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 161.29 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 161.29 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 161.29 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 161.29 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a34006f8-1a8a-46ed-a5d4-b2c39527a211")
+		)
+		(instances
+			(project "OSHE-Reader-PCB"
+				(path "/f297096e-4a95-4c17-b91a-21f33415233d"
+					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 217.17 39.37 0)
 		(unit 1)
 		(body_style 1)
@@ -10699,8 +10777,7 @@
 	(group ""
 		(uuid "21e765d9-7ffc-46c8-95ea-343856c57dcb")
 		(members "1f0d196c-e880-474c-894d-bd810055b057" "41f4f7c5-0f61-48fa-9ca9-6afa817220ce"
-			"5e0c5918-4c34-4409-ba5c-52a50cbc512f" "8ef644f8-28f1-4b61-b58e-3773905c75d5"
-			"b6b70d92-1f83-4e2a-b536-3537d4eeb013"
+			"8ef644f8-28f1-4b61-b58e-3773905c75d5" "b6b70d92-1f83-4e2a-b536-3537d4eeb013"
 		)
 	)
 	(sheet
