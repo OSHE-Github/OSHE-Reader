@@ -5639,6 +5639,16 @@
 	)
 	(wire
 		(pts
+			(xy 118.11 120.65) (xy 121.92 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68cd79a4-9c2e-45c5-9b2b-3808b690e65b")
+	)
+	(wire
+		(pts
 			(xy 212.09 39.37) (xy 217.17 39.37)
 		)
 		(stroke
@@ -6206,6 +6216,16 @@
 			(justify right bottom)
 		)
 		(uuid "38b73bf0-7001-4464-bedc-37aa1e161040")
+	)
+	(label "LED_MONIT"
+		(at 118.11 120.65 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3c0bea90-2a4c-44cb-ae2f-952d84b6b55a")
 	)
 	(label "RES_SCR"
 		(at 118.11 113.03 180)
@@ -10898,7 +10918,7 @@
 	)
 	(sheet
 		(at 121.92 101.6)
-		(size 22.86 20.32)
+		(size 22.86 22.86)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -10924,7 +10944,7 @@
 			)
 		)
 		(property "Sheetfile" "disp+frontlight.kicad_sch"
-			(at 121.92 122.5046 0)
+			(at 121.92 125.0446 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10987,6 +11007,16 @@
 		(pin "SDA" input
 			(at 121.92 118.11 180)
 			(uuid "f2f78029-e7e6-4ec6-bcb1-0b3890639289")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "LED_MONIT" input
+			(at 121.92 120.65 180)
+			(uuid "92c94d5a-822d-44f5-a6b9-e5d289909d81")
 			(effects
 				(font
 					(size 1.27 1.27)

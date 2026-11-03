@@ -3188,6 +3188,12 @@
 		(uuid "4f94ac3b-5bc8-41b4-ba18-6cddb3f548dc")
 	)
 	(junction
+		(at 217.17 52.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "56450786-5fb8-4cc6-95c6-d5f5cfecf7d6")
+	)
+	(junction
 		(at 102.87 173.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3222,12 +3228,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8554b154-e22e-489f-b418-5848e5099407")
-	)
-	(junction
-		(at 217.17 52.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "882f83b2-a5e0-4664-bede-1ae2a14621b1")
 	)
 	(junction
 		(at 102.87 176.53)
@@ -3893,6 +3893,16 @@
 	)
 	(wire
 		(pts
+			(xy 217.17 52.07) (xy 222.25 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8234cd0b-6671-480f-abad-6f0a48905acb")
+	)
+	(wire
+		(pts
 			(xy 60.96 41.91) (xy 59.69 41.91)
 		)
 		(stroke
@@ -4243,16 +4253,6 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 52.07) (xy 222.25 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd84b672-0aff-47bc-9b08-06f65ea08e2e")
-	)
-	(wire
-		(pts
 			(xy 171.45 45.72) (xy 177.8 45.72)
 		)
 		(stroke
@@ -4310,6 +4310,16 @@
 			(type default)
 		)
 		(uuid "ea04e497-c89f-4a31-bd77-7f51b9cdbc9b")
+	)
+	(wire
+		(pts
+			(xy 217.17 52.07) (xy 217.17 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebfb22ce-1982-4d51-9378-79ca09bd6144")
 	)
 	(wire
 		(pts
@@ -4391,16 +4401,6 @@
 		)
 		(uuid "f44f9008-0f49-47a6-bbbb-3ef2dde76e6d")
 	)
-	(wire
-		(pts
-			(xy 217.17 52.07) (xy 217.17 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f62c0c6c-41eb-44db-87b6-b395e67f7e41")
-	)
 	(label "COLOR_SEL_INV"
 		(at 140.97 64.77 0)
 		(effects
@@ -4460,16 +4460,6 @@
 			(justify right bottom)
 		)
 		(uuid "206b45bb-c332-4733-858e-5a21d245068c")
-	)
-	(label "LED_MONIT"
-		(at 222.25 52.07 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "22a21d07-5d0c-44a2-8870-f3bc9cff531b")
 	)
 	(label "GDR"
 		(at 39.37 152.4 180)
@@ -4794,6 +4784,17 @@
 			(justify right)
 		)
 		(uuid "9433d849-e04a-4897-aa51-cd00efc4352c")
+	)
+	(hierarchical_label "LED_MONIT"
+		(shape input)
+		(at 222.25 52.07 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "acb5c38c-2fb2-463c-839a-e84c85341298")
 	)
 	(hierarchical_label "D{slash}C#"
 		(shape input)
