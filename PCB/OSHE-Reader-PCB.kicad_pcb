@@ -20130,7 +20130,7 @@
 	(segment
 		(start 116.5625 76.5)
 		(end 116.5625 80.4)
-		(width 0.254)
+		(width 1)
 		(layer "F.Cu")
 		(net "/Battery Charger/SYS")
 		(uuid "e343cc23-f2b8-4472-a969-8489f687dd0a")
