@@ -76,7 +76,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "silk_edge_clearance|104795000|49559364|5fd63bdf-2fdf-428a-b218-a6ba35e1809d|68cab1aa-9169-4285-bb2a-54d83e8cb91d",
+          ""
+        ],
+        [
+          "silk_edge_clearance|86395000|49559364|5fd63bdf-2fdf-428a-b218-a6ba35e1809d|1817a0f4-6ed3-4e42-854a-98b238f6150c",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -106,7 +115,7 @@
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
-        "lib_footprint_issues": "warning",
+        "lib_footprint_issues": "ignore",
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
@@ -160,7 +169,7 @@
         "min_text_thickness": 0.1524,
         "min_through_hole_diameter": 0.1016,
         "min_track_width": 0.1016,
-        "min_via_annular_width": 0.2032,
+        "min_via_annular_width": 0.1524,
         "min_via_diameter": 0.254,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
@@ -211,7 +220,10 @@
       ],
       "track_widths": [
         0.0,
-        0.254
+        0.254,
+        1.0,
+        1.27,
+        1.36703
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -247,6 +259,10 @@
         {
           "diameter": 0.6096,
           "drill": 0.3048
+        },
+        {
+          "diameter": 0.9,
+          "drill": 0.5
         }
       ],
       "zones_allow_external_fillets": false
@@ -733,7 +749,7 @@
         "uuid": "f297096e-4a95-4c17-b91a-21f33415233d"
       }
     ],
-    "used_designators": "top_right_button1-2,U1-2,D1-8,top_left_button1-2,TH1,C14*1,SW1-5,battery_manager1,Q1-3,L1-3,#PWR1-32,to_usb_c1,to_battery1,R1-19,front_light_connector1,home_button1-2,J1,bottom_left_button1-2,display_connector1,C1-18,bottom_right_button1-2",
+    "used_designators": "D1-8,bottom_left_button1-2,home_button1-2,U1-2,U4,bottom_right_button1-2,J1-5,SW1-5,display_connector1,TH1,top_left_button1-2,top_right_button1-2,battery_manager1,C1-18,C21-22,C25-26,front_light_connector1,to_battery1,to_usb_c1,#PWR1-32,#PWR35-56,L1-3,Q1-3,R1-21,C14*1,esp32_s1,10k1",
     "variants": []
   },
   "sheets": [

@@ -2,4 +2,5 @@
 	(version 7)
 	(lib (name "Adafruit 3983") (type "KiCad") (uri "${KIPRJMOD}/lib/3983") (options "") (descr ""))
 	(lib (name "BQ25616RTWR") (type "KiCad") (uri "${KIPRJMOD}/lib/BQ25616RTWR") (options "") (descr ""))
+	(lib (name "112L-TDA0") (type "") (uri "${KIPRJMOD}/PCB 2025-2026/lib/112L_TDA0") (options "") (descr ""))
 )
