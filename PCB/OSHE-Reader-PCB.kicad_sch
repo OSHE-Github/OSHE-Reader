@@ -5156,6 +5156,10 @@
 		(uuid "1a41ba51-69b9-453e-875e-8ab01b9a4558")
 	)
 	(no_connect
+		(at 91.44 60.96)
+		(uuid "22c54679-253c-41e5-abd4-620f2097b61c")
+	)
+	(no_connect
 		(at 247.65 105.41)
 		(uuid "268e2e15-9b51-4ac6-bbba-b5ac665c59dd")
 	)
@@ -5178,6 +5182,10 @@
 	(no_connect
 		(at 247.65 113.03)
 		(uuid "4324802e-5ef5-4029-b4c9-7e90f7c24f4d")
+	)
+	(no_connect
+		(at 91.44 71.12)
+		(uuid "44638982-f3f3-4783-ab28-59fdc672b095")
 	)
 	(no_connect
 		(at 128.27 63.5)
@@ -6607,16 +6615,6 @@
 		)
 		(uuid "db92dffd-a887-4a18-8096-067b2bd013f5")
 	)
-	(label "STAT"
-		(at 91.44 71.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "dcee2087-184c-43aa-bd99-7c7a807d7bac")
-	)
 	(label "PG"
 		(at 152.4 40.64 180)
 		(effects
@@ -6646,16 +6644,6 @@
 			(justify right bottom)
 		)
 		(uuid "fc058a0b-37fb-48cf-8d41-cab8a926d426")
-	)
-	(label "PG"
-		(at 91.44 60.96 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "fd00990e-6d56-460a-827d-712a4558ee49")
 	)
 	(label "D-"
 		(at 128.27 71.12 180)
