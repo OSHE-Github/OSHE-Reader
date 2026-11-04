@@ -1728,7 +1728,7 @@
 		(uuid "690cc174-cb02-4888-a52f-dc9bcd1b19b4")
 	)
 	(rectangle
-		(start 193.04 83.82)
+		(start 193.04 82.55)
 		(end 226.06 110.49)
 		(stroke
 			(width 0)
@@ -1795,7 +1795,7 @@
 	)
 	(text "STATUS_LEDS"
 		(exclude_from_sim no)
-		(at 199.136 82.804 0)
+		(at 199.136 81.534 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1915,16 +1915,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 97.79) (xy 209.55 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05ebebcf-ce1f-4d0b-8b49-3cb649f46b85")
-	)
-	(wire
-		(pts
 			(xy 142.24 96.52) (xy 142.24 99.06)
 		)
 		(stroke
@@ -2035,16 +2025,6 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 101.6) (xy 210.82 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4946d279-539e-40c4-8012-c6db9afc99ce")
-	)
-	(wire
-		(pts
 			(xy 187.452 66.04) (xy 187.452 62.23)
 		)
 		(stroke
@@ -2112,6 +2092,16 @@
 			(type default)
 		)
 		(uuid "5cd5e34d-1c17-481f-9771-afac98ab35a6")
+	)
+	(wire
+		(pts
+			(xy 209.55 101.6) (xy 210.82 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "631ade0e-bc1f-4383-b811-6b330a7915e9")
 	)
 	(wire
 		(pts
@@ -2272,6 +2262,16 @@
 			(type default)
 		)
 		(uuid "d07d9c79-2539-4bee-b855-8b8b299c7824")
+	)
+	(wire
+		(pts
+			(xy 209.55 97.79) (xy 209.55 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d37fb622-5641-45de-ae5e-e70067bb7d04")
 	)
 	(wire
 		(pts
@@ -2474,6 +2474,16 @@
 		(uuid "2b2b1e96-64ad-42b5-9321-3a073a9f0952")
 	)
 	(label "SYS"
+		(at 201.93 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "38243203-3153-4630-b4a3-6d0abe059d1f")
+	)
+	(label "SYS"
 		(at 107.95 91.44 0)
 		(effects
 			(font
@@ -2573,7 +2583,7 @@
 		)
 		(uuid "a4a1677f-a5dd-47d4-a59f-b89047102a34")
 	)
-	(label "!PG"
+	(label "PG"
 		(at 220.98 105.41 0)
 		(effects
 			(font
@@ -2603,7 +2613,17 @@
 		)
 		(uuid "d9d08b88-ec5c-4ac3-b5eb-7b3b93603b60")
 	)
-	(label "!PG"
+	(label "SYS"
+		(at 209.55 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dc8773b2-b8fa-45b3-971b-495bc233ce87")
+	)
+	(label "PG"
 		(at 67.31 81.28 180)
 		(effects
 			(font
@@ -2656,17 +2676,6 @@
 		)
 		(uuid "3e3a1694-e6ff-4460-ba5c-a67b2ac8a24e")
 	)
-	(hierarchical_label "PG"
-		(shape bidirectional)
-		(at 201.93 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "667ca40e-e633-4516-9299-2153d7053149")
-	)
 	(hierarchical_label "USB_C_VBUS"
 		(shape output)
 		(at 158.75 55.88 0)
@@ -2688,17 +2697,6 @@
 			(justify right)
 		)
 		(uuid "a13c46be-b917-4c97-89fd-5f806c2b9dab")
-	)
-	(hierarchical_label "STAT"
-		(shape bidirectional)
-		(at 209.55 86.36 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b9e3ddfe-fde6-490c-91f9-7016dc6d32c0")
 	)
 	(symbol
 		(lib_id "power:GND")
