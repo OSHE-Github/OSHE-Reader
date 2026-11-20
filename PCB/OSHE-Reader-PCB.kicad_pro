@@ -76,16 +76,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "silk_edge_clearance|104795000|49559364|5fd63bdf-2fdf-428a-b218-a6ba35e1809d|68cab1aa-9169-4285-bb2a-54d83e8cb91d",
-          ""
-        ],
-        [
-          "silk_edge_clearance|86395000|49559364|5fd63bdf-2fdf-428a-b218-a6ba35e1809d|1817a0f4-6ed3-4e42-854a-98b238f6150c",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -221,6 +212,7 @@
       "track_widths": [
         0.0,
         0.254,
+        0.5,
         1.0,
         1.27,
         1.36703
@@ -259,6 +251,10 @@
         {
           "diameter": 0.6096,
           "drill": 0.3048
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.4
         },
         {
           "diameter": 0.9,
@@ -730,6 +726,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -749,7 +753,7 @@
         "uuid": "f297096e-4a95-4c17-b91a-21f33415233d"
       }
     ],
-    "used_designators": "D1-8,bottom_left_button1-2,home_button1-2,U1-2,U4,bottom_right_button1-2,J1-5,SW1-5,display_connector1,TH1,top_left_button1-2,top_right_button1-2,battery_manager1,C1-18,C21-22,C25-26,front_light_connector1,to_battery1,to_usb_c1,#PWR1-32,#PWR35-56,L1-3,Q1-3,R1-21,C14*1,esp32_s1,10k1",
+    "used_designators": "top_right_button1-2,U1-2,U4,D1-8,battery_manager1,Q1-3,SW1-5,C14*1,TH1,top_left_button1-2,bottom_right_button1-2,10k1-4,L1-3,to_battery1,to_usb_c1,#PWR1-32,#PWR35-58,esp32_s1,bottom_left_button1-2,front_light_connector1,R1-21,R26-29,home_button1-2,J1-5,C1-18,C21-22,C25-26,display_connector1",
     "variants": []
   },
   "sheets": [
