@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 3.2,
-          "height": 6.0,
-          "width": 6.0
+          "drill": 1.0,
+          "height": 1.7,
+          "width": 1.7
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -63,7 +63,7 @@
           "min_clearance": 0.0,
           "min_island_area": 10.0,
           "min_thickness": 0.25,
-          "pad_connection": 1,
+          "pad_connection": 2,
           "remove_islands": 0,
           "thermal_relief_gap": 0.5,
           "thermal_relief_spoke_width": 0.5
@@ -76,7 +76,124 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "clearance|115437900|85182049|2f0c99c6-c231-4272-ab83-12323d786e56|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|115603000|85682175|fad28e11-dd6d-4780-8380-ad0267205910|adc3fa9c-8ef6-4a25-9fe0-d62eac4c3a8a",
+          ""
+        ],
+        [
+          "clearance|115603000|86182301|fad28e11-dd6d-4780-8380-ad0267205910|ea6cec6c-7f1f-43f0-88e4-480231cb6ff4",
+          ""
+        ],
+        [
+          "clearance|115603000|86682427|fad28e11-dd6d-4780-8380-ad0267205910|be7ddd12-98b9-4889-9f48-4bc655547208",
+          ""
+        ],
+        [
+          "clearance|115603000|87182553|fad28e11-dd6d-4780-8380-ad0267205910|9be30b11-3fa7-44d6-96fd-7e89c58c69ac",
+          ""
+        ],
+        [
+          "clearance|115603000|87682679|fad28e11-dd6d-4780-8380-ad0267205910|05bb8fa2-f9b0-4efa-847e-d1ab6eec301d",
+          ""
+        ],
+        [
+          "clearance|115622685|88121464|2375d368-51fa-473f-bdbb-34255a8336bb|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|116122811|88121464|435606dc-d8b0-469a-b8e1-2a7e172cade2|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|116622937|84997264|c8610bd8-782c-4444-9fc1-9d7e051b1e0a|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|116622937|88121464|beb49eb9-069f-4615-9b55-636acc129379|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|117123063|84997264|bc447072-3421-4779-8ef9-ff7d87348ffb|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|117123063|88121464|897830a4-6f49-4312-9932-519fca304572|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|117623189|84997264|993fc05c-9618-4f0b-bcaa-a2937a168250|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|117623189|88121464|2e37d0f2-0f58-4273-9392-7eda0e9edca4|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|118123315|84997264|1853832d-5796-4f4c-8714-cf294eed721d|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|118123315|88121464|c6a32d5d-352c-4b0a-8673-03f2436ec702|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|118562100|85182049|24a1bd70-c729-4f4d-adc2-2ad25fe4bf66|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|118562100|85682175|c7641042-75c0-40e3-99f3-8beb0a494684|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|118562100|86182301|8b50a95a-4e27-4f86-b76c-61c7f8b47cdc|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|118562100|86682427|7e572065-f198-41f8-b48b-53f713575b5e|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|118562100|87182553|ddc1e2ea-fa52-497e-b305-4c2bdfe4faad|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|118562100|87682679|f26f2abd-8956-4d29-aa8c-d768a4dfa199|fad28e11-dd6d-4780-8380-ad0267205910",
+          ""
+        ],
+        [
+          "clearance|97087500|103675000|ccdeedd0-4d97-4046-93b9-38cc235db542|cffa48ec-a318-41fe-83ca-1b38a4298ad4",
+          ""
+        ],
+        [
+          "clearance|97412500|102250000|f31acabb-26ef-424a-852e-99f07b91ca57|5fec2905-025f-4d07-b640-4d1b47d58e1e",
+          ""
+        ],
+        [
+          "clearance|97500000|102000000|77fe5a93-c1f9-4973-aaae-8f2c3533bc71|afaefe54-0631-4a22-8414-b0bef200e670",
+          ""
+        ],
+        [
+          "clearance|97587500|102250000|f31acabb-26ef-424a-852e-99f07b91ca57|afaefe54-0631-4a22-8414-b0bef200e670",
+          ""
+        ],
+        [
+          "clearance|97912500|103675000|4d08e9d4-cfa3-4a92-ba0d-40db664d903e|cffa48ec-a318-41fe-83ca-1b38a4298ad4",
+          ""
+        ],
+        [
+          "silk_edge_clearance|104795000|49559364|5fd63bdf-2fdf-428a-b218-a6ba35e1809d|68cab1aa-9169-4285-bb2a-54d83e8cb91d",
+          ""
+        ],
+        [
+          "silk_edge_clearance|86395000|49559364|5fd63bdf-2fdf-428a-b218-a6ba35e1809d|1817a0f4-6ed3-4e42-854a-98b238f6150c",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -251,10 +368,6 @@
         {
           "diameter": 0.6096,
           "drill": 0.3048
-        },
-        {
-          "diameter": 0.8,
-          "drill": 0.4
         },
         {
           "diameter": 0.9,
@@ -726,14 +839,6 @@
       "version": 1
     },
     "net_format_name": "",
-    "ngspice": {
-      "fix_include_paths": true,
-      "meta": {
-        "version": 0
-      },
-      "model_mode": 4,
-      "workbook_filename": ""
-    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "reuse_designators": true,
@@ -753,7 +858,7 @@
         "uuid": "f297096e-4a95-4c17-b91a-21f33415233d"
       }
     ],
-    "used_designators": "top_right_button1-2,U1-2,U4,D1-8,battery_manager1,Q1-3,SW1-5,C14*1,TH1,top_left_button1-2,bottom_right_button1-2,10k1-4,L1-3,to_battery1,to_usb_c1,#PWR1-32,#PWR35-58,esp32_s1,bottom_left_button1-2,front_light_connector1,R1-21,R26-29,home_button1-2,J1-5,C1-18,C21-22,C25-26,display_connector1",
+    "used_designators": "D1-8,bottom_left_button1-2,home_button1-2,U1-2,U4,bottom_right_button1-2,J1-5,SW1-5,display_connector1,TH1,top_left_button1-2,top_right_button1-2,battery_manager1-2,C1-18,C21-22,C25-26,front_light_connector1,to_battery1,to_usb_c1,#PWR1-32,#PWR35-56,L1-3,Q1-3,R1-21,C14*1,esp32_s1,10k1",
     "variants": []
   },
   "sheets": [

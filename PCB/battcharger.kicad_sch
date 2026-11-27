@@ -1911,6 +1911,16 @@
 	)
 	(wire
 		(pts
+			(xy 107.95 81.28) (xy 107.95 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "037da6b6-0a7f-4141-9130-a0e9ec16664c")
+	)
+	(wire
+		(pts
 			(xy 142.24 96.52) (xy 142.24 99.06)
 		)
 		(stroke
@@ -2101,16 +2111,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 93.98) (xy 107.95 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "66406180-bb59-4756-a8b8-a1f0e1de0437")
-	)
-	(wire
-		(pts
 			(xy 182.372 55.88) (xy 187.452 55.88)
 		)
 		(stroke
@@ -2198,6 +2198,16 @@
 			(type default)
 		)
 		(uuid "8c94f4fc-ad37-4402-9d9d-071ec1613e01")
+	)
+	(wire
+		(pts
+			(xy 107.95 93.98) (xy 107.95 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97098d3c-5504-4b6b-bb6a-1f86d464bcaa")
 	)
 	(wire
 		(pts
@@ -2381,16 +2391,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 78.74) (xy 107.95 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "eb15c82b-7842-4e82-aaa0-e7b1391dbf5d")
-	)
-	(wire
-		(pts
 			(xy 210.82 105.41) (xy 220.98 105.41)
 		)
 		(stroke
@@ -2420,7 +2420,7 @@
 		(uuid "014a01bc-39c5-48e0-ac2d-d2998ae16cb9")
 	)
 	(label "SW"
-		(at 107.95 78.74 0)
+		(at 107.95 81.28 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2630,7 +2630,7 @@
 		(uuid "ebaea92b-aef0-4d84-a229-c15cf2546c4c")
 	)
 	(label "BAT"
-		(at 107.95 93.98 0)
+		(at 107.95 96.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
